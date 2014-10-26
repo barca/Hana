@@ -1,15 +1,15 @@
 Feature: Add/Edit Classes
 
-As an administrator
-I want to create a “class” with   the following information:
-- Title
-- Instructor
-- Grade level
-- Day and time
-- Room location
-- Max enrollment
-- Description
-So that I have all pertinent information and can access and edit at another time.
+  As an administrator
+  I want to create a “class” with   the following information:
+  - Title
+  - Instructor
+  - Grade level
+  - Day and time
+  - Room location
+  - Max enrollment
+  - Description
+  So that I have all pertinent information and can access and edit at another time.
   Background: classes Instructorn database
 
       Given the following classes exist:
