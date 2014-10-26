@@ -1,4 +1,3 @@
-=begin
 Feature: Add/Edit Classes
 
 As an administrator
@@ -11,7 +10,6 @@ I want to create a “class” with   the following information:
 - Max enrollment
 - Description
 So that I have all pertinent information and can access and edit at another time.
-=end
   Background: classes Instructorn database
 
       Given the following classes exist:
