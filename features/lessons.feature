@@ -13,7 +13,7 @@ So that I have all pertinent information and can access and edit at another time
   Background: classes Instructorn database
 
       Given the following classes exist:
-        | title      |following Instructor    | Grade Level| Time    | Location             |Max enrollmentrollment | Desc
+        | title      |following instructor    | Grade Level| Time    | Location             |Max enrollment | Desc
         | Star Wars 101| Han Solo | 1-3|  1414339890  | galaxy far away | 7 | “”
         | Star Wars 102| luke skywalker | 3-5 |  1414339890339890  | jedi academy     | 7 | “”
         | Death star  | Darth Vader| 6-8 |  1414339890  | not death star     | 7 | “”
