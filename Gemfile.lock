@@ -83,6 +83,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_calendar (1.1.6)
+      rails (>= 3.0)
     simplecov (0.9.1)
       docile (~> 1.1.0)
       multi_json (~> 1.0)
@@ -120,7 +122,11 @@ DEPENDENCIES
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+<<<<<<< HEAD
+  simple_calendar (~> 1.1.6)
+=======
   simplecov
+>>>>>>> b401a7b472450075f9a3dd8be8036dd09fb2c94f
   spring
   sqlite3
   turbolinks

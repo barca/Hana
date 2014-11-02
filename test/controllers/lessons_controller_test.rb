@@ -18,7 +18,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test "should create lesson" do
     assert_difference('Lesson.count') do
-      post :create, lesson: { description: @lesson.description, ends_at: @lesson.ends_at, grade_level: @lesson.grade_level, instructor: @lesson.instructor, location: @lesson.location, max_enrollment: @lesson.max_enrollment, start_at: @lesson.start_at, title: @lesson.title }
+      post :create, lesson: { description: @lesson.description, ends_at: @lesson.ends_at, grade_level: @lesson.grade_level, instructor: @lesson.instructor, location: @lesson.location, max_enrollment: @lesson.max_enrollment, starts_at: @lesson.starts_at, title: @lesson.title }
     end
 
     assert_redirected_to lesson_path(assigns(:lesson))
@@ -35,7 +35,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test "should update lesson" do
-    patch :update, id: @lesson, lesson: { description: @lesson.description, ends_at: @lesson.ends_at, grade_level: @lesson.grade_level, instructor: @lesson.instructor, location: @lesson.location, max_enrollment: @lesson.max_enrollment, start_at: @lesson.start_at, title: @lesson.title }
+    patch :update, id: @lesson, lesson: { description: @lesson.description, ends_at: @lesson.ends_at, grade_level: @lesson.grade_level, instructor: @lesson.instructor, location: @lesson.location, max_enrollment: @lesson.max_enrollment, starts_at: @lesson.starts_at, title: @lesson.title }
     assert_redirected_to lesson_path(assigns(:lesson))
   end
 

@@ -763,3 +763,800 @@ Processing by LessonsController#index as HTML
   [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
   Rendered lessons/index.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 83ms (Views: 82.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 15:39:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant LessonsController::SimpleCalendar):
+  app/controllers/lessons_controller.rb:3:in `<class:LessonsController>'
+  app/controllers/lessons_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.3ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 15:40:19 -0500
+
+ActionController::RoutingError (uninitialized constant LessonsController::SimpleCalendar):
+  app/controllers/lessons_controller.rb:3:in `<class:LessonsController>'
+  app/controllers/lessons_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:40:23 -0500
+
+ActionController::RoutingError (uninitialized constant LessonsController::SimpleCalendar):
+  app/controllers/lessons_controller.rb:3:in `<class:LessonsController>'
+  app/controllers/lessons_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:41:27 -0500
+
+ActionController::RoutingError (undefined local variable or method `has_calendar' for LessonsController:Class):
+  app/controllers/lessons_controller.rb:4:in `<class:LessonsController>'
+  app/controllers/lessons_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:42:16 -0500
+
+ActionController::RoutingError (uninitialized constant LessonsController::SimpleCalendar):
+  app/controllers/lessons_controller.rb:2:in `<class:LessonsController>'
+  app/controllers/lessons_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:43:27 -0500
+Processing by LessonsController#index as HTML
+Completed 500 Internal Server Error in 13ms
+
+NameError (uninitialized constant Lesson::SimpleCalendar):
+  app/models/lesson.rb:2:in `<class:Lesson>'
+  app/models/lesson.rb:1:in `<top (required)>'
+  app/controllers/lessons_controller.rb:6:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:43:38 -0500
+Processing by LessonsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant Lesson::SimpleCalendar):
+  app/models/lesson.rb:2:in `<class:Lesson>'
+  app/models/lesson.rb:1:in `<top (required)>'
+  app/controllers/lessons_controller.rb:6:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:44:06 -0500
+Processing by LessonsController#index as HTML
+  [1m[35mLesson Load (0.4ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (18.4ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `month_calendar' for #<#<Class:0x007fb6bf99f6d8>:0x007fb6bf99ed00>):
+    1: <h1>Calendar</h1>
+    2: 
+    3: <%= month_calendar events: @lessons do |date,lessons| %>
+    4:   <%= date %>
+    5: 
+    6:   <% lessons.each do |lesson| %>
+  app/views/lessons/index.html.erb:3:in `_app_views_lessons_index_html_erb___2647485481908628692_70211437653140'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:46:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LessonsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (undefined local variable or method `starts_at' for #<Lesson:0x007fb0cd6a0330>):
+    1: <h1>Calendar</h1>
+    2: 
+    3: <%= month_calendar events: @lessons do |date,lessons| %>
+    4:   <%= date %>
+    5: 
+    6:   <% lessons.each do |lesson| %>
+  app/views/lessons/index.html.erb:3:in `_app_views_lessons_index_html_erb___4575173672346665420_70198669117920'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLessons (20141102205212)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "lessons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "instructor" varchar(255), "grade_level" varchar(255), "starts_at" datetime, "ends_at" datetime, "location" varchar(255), "max_enrollment" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "lessons" already exists: CREATE TABLE "lessons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "instructor" varchar(255), "grade_level" varchar(255), "starts_at" datetime, "ends_at" datetime, "location" varchar(255), "max_enrollment" integer, "description" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLessons (20141102205212)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "lessons"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "lessons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "instructor" varchar(255), "grade_level" varchar(255), "starts_at" datetime, "ends_at" datetime, "location" varchar(255), "max_enrollment" integer, "description" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141102205212"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:54:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LessonsController#index as HTML
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 172ms (Views: 152.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-02 15:54:26 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:56:45 -0500
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.erb within layouts/application (123.0ms)
+Completed 500 Internal Server Error in 135ms
+
+ActionView::Template::Error (undefined method `any?' for nil:NilClass):
+    1: <%= month_calendar events: @meetings do |date, meetings| %>
+    2:   <%= date %>
+    3: 
+    4:   <% meetings.each do |meeting| %>
+  app/views/lessons/index.html.erb:1:in `_app_views_lessons_index_html_erb___991464538790597400_70128953233220'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:57:26 -0500
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `any?' for nil:NilClass):
+    1: <!--
+    2: <%= month_calendar events: @meetings do |date, meetings| %>
+    3:   <%= date %>
+    4: 
+    5:   <% meetings.each do |meeting| %>
+  app/views/lessons/index.html.erb:2:in `_app_views_lessons_index_html_erb___991464538790597400_70128935737900'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (1.4ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 206ms (Views: 202.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-02 15:57:42 -0500
+
+
+Started GET "/lessons/new" for 127.0.0.1 at 2014-11-02 15:57:44 -0500
+Processing by LessonsController#new as HTML
+  Rendered lessons/_form.html.erb (79.7ms)
+  Rendered lessons/new.html.erb within layouts/application (86.2ms)
+Completed 200 OK in 296ms (Views: 294.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/lessons" for 127.0.0.1 at 2014-11-02 15:58:13 -0500
+Processing by LessonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEWDygohqP2SP7VRPtn8CajR9y7HgrnO5SqvIx/kPk0=", "lesson"=>{"title"=>"Class A", "instructor"=>"Joe", "grade_level"=>"7", "starts_at(1i)"=>"2014", "starts_at(2i)"=>"11", "starts_at(3i)"=>"5", "starts_at(4i)"=>"20", "starts_at(5i)"=>"57", "ends_at(1i)"=>"2014", "ends_at(2i)"=>"11", "ends_at(3i)"=>"5", "ends_at(4i)"=>"20", "ends_at(5i)"=>"57", "location"=>"lj", "max_enrollment"=>"7", "description"=>"aldsjflkf"}, "commit"=>"Create Lesson"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "lessons" ("created_at", "description", "ends_at", "grade_level", "instructor", "location", "max_enrollment", "starts_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-11-02 20:58:13.761580"], ["description", "aldsjflkf"], ["ends_at", "2014-11-05 20:57:00.000000"], ["grade_level", "7"], ["instructor", "Joe"], ["location", "lj"], ["max_enrollment", 7], ["starts_at", "2014-11-05 20:57:00.000000"], ["title", "Class A"], ["updated_at", "2014-11-02 20:58:13.761580"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/lessons/1
+Completed 302 Found in 28ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/lessons/1" for 127.0.0.1 at 2014-11-02 15:58:13 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.8ms)[0m  [1mSELECT  "lessons".* FROM "lessons"  WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered lessons/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 219ms (Views: 212.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-02 15:58:14 -0500
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 15:58:17 -0500
+Processing by LessonsController#index as HTML
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 151ms (Views: 149.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 15:58:31 -0500
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `any?' for nil:NilClass):
+    1: 
+    2: <%= month_calendar events: @meetings do |date, meetings| %>
+    3:   <%= date %>
+    4: 
+    5:   <% meetings.each do |meeting| %>
+  app/views/lessons/index.html.erb:2:in `_app_views_lessons_index_html_erb___991464538790597400_70128948585440'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.8ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 15:59:19 -0500
+Processing by LessonsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined method `name' for #<Lesson:0x007f9052206d38>):
+    4: 
+    5:   <% lessons.each do |lesson| %>
+    6:     <div>
+    7:       <%= lesson.name %>
+    8:     </div>
+    9:   <% end %>
+   10: <% end %>
+  app/views/lessons/index.html.erb:7:in `block (2 levels) in _app_views_lessons_index_html_erb___991464538790597400_70128948714180'
+  app/views/lessons/index.html.erb:5:in `each'
+  app/views/lessons/index.html.erb:5:in `block in _app_views_lessons_index_html_erb___991464538790597400_70128948714180'
+  app/views/lessons/index.html.erb:2:in `_app_views_lessons_index_html_erb___991464538790597400_70128948714180'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (31.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.6ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+Processing by LessonsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 267ms (Views: 262.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-02 15:59:30 -0500
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+Processing by LessonsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.3ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 260ms (Views: 257.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 16:00:29 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:30 -0500
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2014-11-02 16:00:43 -0500
+Processing by ClassroomsController#index as HTML
+  [1m[35mClassroom Load (0.6ms)[0m  SELECT "classrooms".* FROM "classrooms"
+  Rendered classrooms/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 252ms (Views: 244.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 16:00:45 -0500
+Processing by LessonsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.7ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.5ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 243ms (Views: 239.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+Processing by LessonsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.5ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 237ms (Views: 234.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-02 16:00:54 -0500
+
+
+Started GET "/lessons/1" for 127.0.0.1 at 2014-11-02 16:01:23 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons"  WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered lessons/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 242ms (Views: 238.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 16:01:26 -0500
+Processing by LessonsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.5ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.4ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 276ms (Views: 272.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lessons?start_date=2014-12-01" for 127.0.0.1 at 2014-11-02 16:01:34 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-12-01"}
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 273ms (Views: 271.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lessons?start_date=2014-11-30" for 127.0.0.1 at 2014-11-02 16:01:35 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-11-30"}
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.5ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 249ms (Views: 246.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lessons?start_date=2014-10-26" for 127.0.0.1 at 2014-11-02 16:01:36 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-10-26"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.5ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.5ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 257ms (Views: 253.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lessons?start_date=2014-11-03" for 127.0.0.1 at 2014-11-02 16:01:37 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-11-03"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.8ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.5ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 332ms (Views: 328.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/lessons/new" for 127.0.0.1 at 2014-11-02 16:01:50 -0500
+Processing by LessonsController#new as HTML
+  Rendered lessons/_form.html.erb (42.4ms)
+  Rendered lessons/new.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 292ms (Views: 290.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/lessons" for 127.0.0.1 at 2014-11-02 16:02:19 -0500
+Processing by LessonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEWDygohqP2SP7VRPtn8CajR9y7HgrnO5SqvIx/kPk0=", "lesson"=>{"title"=>"Class on December 3", "instructor"=>"sadf", "grade_level"=>"98", "starts_at(1i)"=>"2014", "starts_at(2i)"=>"12", "starts_at(3i)"=>"3", "starts_at(4i)"=>"21", "starts_at(5i)"=>"01", "ends_at(1i)"=>"2014", "ends_at(2i)"=>"12", "ends_at(3i)"=>"3", "ends_at(4i)"=>"21", "ends_at(5i)"=>"01", "location"=>"alksdjf", "max_enrollment"=>"6", "description"=>"sd;klfjasldj"}, "commit"=>"Create Lesson"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "lessons" ("created_at", "description", "ends_at", "grade_level", "instructor", "location", "max_enrollment", "starts_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-11-02 21:02:19.996683"], ["description", "sd;klfjasldj"], ["ends_at", "2014-12-03 21:01:00.000000"], ["grade_level", "98"], ["instructor", "sadf"], ["location", "alksdjf"], ["max_enrollment", 6], ["starts_at", "2014-12-03 21:01:00.000000"], ["title", "Class on December 3"], ["updated_at", "2014-11-02 21:02:19.996683"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/lessons/2
+Completed 302 Found in 29ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/lessons/2" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mLesson Load (0.3ms)[0m  SELECT  "lessons".* FROM "lessons"  WHERE "lessons"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered lessons/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 252ms (Views: 248.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-02 16:02:20 -0500
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 16:02:24 -0500
+Processing by LessonsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.4ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 227ms (Views: 224.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/lessons?start_date=2014-12-01" for 127.0.0.1 at 2014-11-02 16:02:29 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-12-01"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 191ms (Views: 190.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lessons?start_date=2014-11-30" for 127.0.0.1 at 2014-11-02 16:02:35 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-11-30"}
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 268ms (Views: 265.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2014-11-02 16:04:15 -0500
+Processing by ClassroomsController#index as HTML
+  [1m[35mClassroom Load (0.1ms)[0m  SELECT "classrooms".* FROM "classrooms"
+  Rendered classrooms/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 114ms (Views: 112.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 16:04:16 -0500
+Processing by LessonsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 256ms (Views: 252.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 16:08:06 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 16:08:06 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 16:08:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 16:08:06 -0500
+
+
+Started GET "/lessons?start_date=2014-12-01" for 127.0.0.1 at 2014-11-02 16:14:28 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-12-01"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lessons?start_date=2014-11-30" for 127.0.0.1 at 2014-11-02 16:14:30 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-11-30"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2014-11-02 16:16:55 -0500
+Processing by ClassroomsController#index as HTML
+  [1m[35mClassroom Load (0.2ms)[0m  SELECT "classrooms".* FROM "classrooms"
+  Rendered classrooms/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/classrooms/new" for 127.0.0.1 at 2014-11-02 16:16:57 -0500
+Processing by ClassroomsController#new as HTML
+  Rendered classrooms/_form.html.erb (3.2ms)
+  Rendered classrooms/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 82ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2014-11-02 16:16:59 -0500
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.1ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"[0m
+  Rendered classrooms/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/classrooms/1/edit" for 127.0.0.1 at 2014-11-02 16:17:02 -0500
+Processing by ClassroomsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClassroom Load (0.2ms)[0m  SELECT  "classrooms".* FROM "classrooms"  WHERE "classrooms"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered classrooms/_form.html.erb (2.8ms)
+  Rendered classrooms/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/classrooms/1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+Processing by ClassroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEWDygohqP2SP7VRPtn8CajR9y7HgrnO5SqvIx/kPk0=", "classroom"=>{"name"=>"Dance Studio", "max_occupancy"=>"15", "details"=>"NO SHOES MOM!!!!!"}, "commit"=>"Update Classroom", "id"=>"1"}
+  [1m[36mClassroom Load (0.2ms)[0m  [1mSELECT  "classrooms".* FROM "classrooms"  WHERE "classrooms"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/classrooms/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/classrooms/1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+Processing by ClassroomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClassroom Load (0.1ms)[0m  SELECT  "classrooms".* FROM "classrooms"  WHERE "classrooms"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered classrooms/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-02 16:17:08 -0500
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 16:18:37 -0500
+Processing by LessonsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-02 16:24:45 -0500
+Processing by LessonsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.3ms)
