@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
- 
-  resources :classrooms, :lessons
-  #get 'schedule/index'
-  root 'schedule#index'
+  resources :lessons
+
+  resources :classrooms
+
+  root 'lessons#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

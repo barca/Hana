@@ -1,13 +1,13 @@
-<h1>Classroom Info</h1>
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
   <%= @classroom.name %>
 </p>
- 
+
 <p>
-  <strong>Max_enrollment:</strong>
-  <%= @classroom.max_enrollment %>
+  <strong>Max occupancy:</strong>
+  <%= @classroom.max_occupancy %>
 </p>
 
 <p>
@@ -15,4 +15,5 @@
   <%= @classroom.details %>
 </p>
 
-<%= link_to 'Back to Classrooms List', classrooms_path %>
+<%= link_to 'Edit', edit_classroom_path(@classroom) %> |
+<%= link_to 'Back', classrooms_path %>

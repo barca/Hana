@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @lesson.title %>
+</p>
+
+<p>
+  <strong>Instructor:</strong>
+  <%= @lesson.instructor %>
+</p>
+
+<p>
+  <strong>Grade level:</strong>
+  <%= @lesson.grade_level %>
+</p>
+
+<p>
+  <strong>Start at:</strong>
+  <%= @lesson.start_at %>
+</p>
+
+<p>
+  <strong>Ends at:</strong>
+  <%= @lesson.ends_at %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @lesson.location %>
+</p>
+
+<p>
+  <strong>Max enrollment:</strong>
+  <%= @lesson.max_enrollment %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>

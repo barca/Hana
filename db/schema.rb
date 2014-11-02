@@ -11,20 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029133959) do
+ActiveRecord::Schema.define(version: 20141102200233) do
 
   create_table "classrooms", force: true do |t|
     t.string   "name"
-    t.string   "max_enrollment"
+    t.integer  "max_occupancy"
     t.text     "details"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "events", force: true do |t|
-    t.string   "name"
-    t.datetime "start_at"
-    t.datetime "end_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,9 +25,10 @@ ActiveRecord::Schema.define(version: 20141029133959) do
     t.string   "title"
     t.string   "instructor"
     t.string   "grade_level"
-    t.string   "day_and_time"
+    t.datetime "start_at"
+    t.datetime "ends_at"
     t.string   "location"
-    t.string   "max_enrollment"
+    t.integer  "max_enrollment"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

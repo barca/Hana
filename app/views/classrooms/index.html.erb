@@ -1,24 +1,29 @@
-<h1>Classrooms</h1>
+<h1>Listing classrooms</h1>
 
-<%= link_to 'Logout', root_path %><br><br>
-
-<%= link_to 'Add Classroom', new_classroom_path %>
- 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Max Enrollment</th>
-    <th>Details</th>
-    <th colspan="2"></th>
-  </tr>
- 
-  <% @classrooms.each do |classroom| %>
+  <thead>
     <tr>
-      <td><%= classroom.name %></td>
-      <td><%= classroom.max_enrollment %></td>
-      <td><%= classroom.details %></td>
-      <td><%= link_to 'Edit', edit_classroom_path(classroom) %></td>
-      <td><%= link_to 'Delete', classroom_path(classroom), method: :delete, data: { confirm: 'Are you sure you want to delete this classroom?' } %></td>
+      <th>Name</th>
+      <th>Max occupancy</th>
+      <th>Details</th>
+      <th colspan="3"></th>
     </tr>
-  <% end %>
+  </thead>
+
+  <tbody>
+    <% @classrooms.each do |classroom| %>
+      <tr>
+        <td><%= classroom.name %></td>
+        <td><%= classroom.max_occupancy %></td>
+        <td><%= classroom.details %></td>
+        <td><%= link_to 'Show', classroom %></td>
+        <td><%= link_to 'Edit', edit_classroom_path(classroom) %></td>
+        <td><%= link_to 'Destroy', classroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
+
+<br>
+
+<%= link_to 'New Classroom', new_classroom_path %>

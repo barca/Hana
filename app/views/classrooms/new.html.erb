@@ -1,24 +1,5 @@
-<h1>Add Classroom</h1>
+<h1>New classroom</h1>
 
-<%= form_for :classroom, url: classrooms_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :max_enrollment %><br>
-    <%= f.text_field :max_enrollment %>
-  </p>
+<%= render 'form' %>
 
-  <p>
-    <%= f.label :details %><br>
-    <%= f.text_area :details %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
-<%= link_to 'Back to Classrooms List', classrooms_path %>
+<%= link_to 'Back', classrooms_path %>

@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  max_enrollment: MyString
+  max_occupancy: 1
   details: MyText
 
 two:
   name: MyString
-  max_enrollment: MyString
+  max_occupancy: 1
   details: MyText
