@@ -122,11 +122,8 @@ DEPENDENCIES
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
-<<<<<<< HEAD
   simple_calendar (~> 1.1.6)
-=======
   simplecov
->>>>>>> b401a7b472450075f9a3dd8be8036dd09fb2c94f
   spring
   sqlite3
   turbolinks
