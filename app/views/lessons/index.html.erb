@@ -1,10 +1,15 @@
 <h1>Calendar Example</h1>
+
+<%= link_to 'New Lesson', new_lesson_path %>
+<br></br>
+
 <%= month_calendar events: @lessons do |date, lessons| %>
-  <%= date %>
+  <%= date.day %>
 
   <% lessons.each do |lesson| %>
     <div>
-      <%= lesson.title %>
+      <%= link_to lesson.title, lesson %>
+      <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   <% end %>
 <% end %>
