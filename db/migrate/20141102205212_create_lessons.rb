@@ -4,7 +4,7 @@ class CreateLessons < ActiveRecord::Migration
       t.string :title
       t.string :instructor
       t.string :grade_level
-      t.datetime :start_at
+      t.datetime :starts_at
       t.datetime :ends_at
       t.string :location
       t.integer :max_enrollment

@@ -37,4 +37,5 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'simple_calendar', '~> 1.1.6'
 
