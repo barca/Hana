@@ -1,3 +1,15 @@
+<h1>Calendar Example</h1>
+<%= month_calendar events: @lessons do |date, lessons| %>
+  <%= date %>
+
+  <% lessons.each do |lesson| %>
+    <div>
+      <%= lesson.title %>
+    </div>
+  <% end %>
+<% end %>
+
+
 <h1>Listing lessons</h1>
 
 <table>
@@ -6,7 +18,7 @@
       <th>Title</th>
       <th>Instructor</th>
       <th>Grade level</th>
-      <th>Start at</th>
+      <th>Starts at</th>
       <th>Ends at</th>
       <th>Location</th>
       <th>Max enrollment</th>
@@ -21,7 +33,7 @@
         <td><%= lesson.title %></td>
         <td><%= lesson.instructor %></td>
         <td><%= lesson.grade_level %></td>
-        <td><%= lesson.start_at %></td>
+        <td><%= lesson.starts_at %></td>
         <td><%= lesson.ends_at %></td>
         <td><%= lesson.location %></td>
         <td><%= lesson.max_enrollment %></td>
