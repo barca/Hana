@@ -36,6 +36,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    docile (1.1.5)
     erubis (2.7.0)
     execjs (2.2.2)
     hike (1.2.3)
@@ -84,6 +85,11 @@ GEM
       rdoc (~> 4.0)
     simple_calendar (1.1.6)
       rails (>= 3.0)
+    simplecov (0.9.1)
+      docile (~> 1.1.0)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     spring (1.1.3)
     sprockets (2.11.3)
       hike (~> 1.2)
@@ -116,7 +122,11 @@ DEPENDENCIES
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+<<<<<<< HEAD
   simple_calendar (~> 1.1.6)
+=======
+  simplecov
+>>>>>>> b401a7b472450075f9a3dd8be8036dd09fb2c94f
   spring
   sqlite3
   turbolinks
