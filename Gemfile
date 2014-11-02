@@ -34,7 +34,7 @@ gem 'spring',        group: :development
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'simplecov', :require => false, :group => :test
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
