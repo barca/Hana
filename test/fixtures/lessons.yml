@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  instructor: MyString
+  grade_level: MyString
+  day_and_time: MyString
+  location: MyString
+  max_enrollment: MyString
+  description: MyText
+
+two:
+  title: MyString
+  instructor: MyString
+  grade_level: MyString
+  day_and_time: MyString
+  location: MyString
+  max_enrollment: MyString
+  description: MyText
