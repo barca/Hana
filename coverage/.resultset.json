@@ -1,13 +1,13 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/saasbook/Team-Hana/app/models/lesson.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/models/lesson.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/Team-Hana/app/controllers/lessons_controller.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/controllers/lessons_controller.rb": [
         1,
         1,
         null,
@@ -50,59 +50,59 @@
         null,
         null,
         1,
-        1,
-        1,
         2,
-        1,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
+        2,
         4,
-        null,
-        null,
-        null,
-        1,
         2,
         null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        7,
+        null,
+        null,
+        null,
+        1,
+        3,
+        null,
         null
       ],
-      "/home/saasbook/Team-Hana/app/controllers/application_controller.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/saasbook/Team-Hana/app/helpers/application_helper.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Team-Hana/app/helpers/classrooms_helper.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/classrooms_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Team-Hana/app/helpers/lessons_helper.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/lessons_helper.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1415034939
+    "timestamp": 1415047359
   }
 }
