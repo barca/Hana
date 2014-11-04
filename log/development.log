@@ -995,3 +995,100 @@ Processing by ClassroomsController#index as HTML
   [1m[35mClassroom Load (0.1ms)[0m  SELECT "classrooms".* FROM "classrooms"
   Rendered classrooms/index.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LessonsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.3ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 178ms (Views: 164.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:53:07 -0500
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2014-11-03 21:53:13 -0500
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.5ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"[0m
+  Rendered classrooms/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/classrooms/new" for 127.0.0.1 at 2014-11-03 21:53:17 -0500
+Processing by ClassroomsController#new as HTML
+  Rendered classrooms/_form.html.erb (10.1ms)
+  Rendered classrooms/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/classrooms" for 127.0.0.1 at 2014-11-03 21:53:19 -0500
+Processing by ClassroomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ttSrjXHsDDnI11mvYLLVKlvgJxGy4o4Fb3P7Bhvq5Mg=", "classroom"=>{"name"=>"", "max_occupancy"=>"", "details"=>""}, "commit"=>"Create Classroom"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered classrooms/_form.html.erb (3.6ms)
+  Rendered classrooms/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 74ms (Views: 71.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2014-11-03 21:53:29 -0500
+Processing by ClassroomsController#index as HTML
+  [1m[35mClassroom Load (1.6ms)[0m  SELECT "classrooms".* FROM "classrooms"
+  Rendered classrooms/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 225ms (Views: 221.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:53:30 -0500
+Processing by LessonsController#index as HTML
+  [1m[36m (5.2ms)[0m  [1mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[35mLesson Load (1.5ms)[0m  SELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1
+  [1m[36mLesson Load (1.0ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (142.8ms)
+Completed 200 OK in 238ms (Views: 227.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2014-11-03 21:53:33 -0500
+Processing by LessonsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "lessons"
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT  "lessons".* FROM "lessons"   ORDER BY "lessons"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lessons/new" for 127.0.0.1 at 2014-11-03 21:54:04 -0500
+Processing by LessonsController#new as HTML
+  [1m[36mClassroom Load (0.1ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"[0m
+  Rendered lessons/_form.html.erb (13.3ms)
+  Rendered lessons/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 71ms (Views: 70.2ms | ActiveRecord: 0.1ms)

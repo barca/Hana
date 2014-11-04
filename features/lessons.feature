@@ -1,4 +1,4 @@
-Feature: Add/Edit Lessons 
+Feature: Add/Edit Lessons
 
   As an administrator
   I want to create a lesson with   the following information:
@@ -23,7 +23,7 @@ Feature: Add/Edit Lessons
 
   Scenario: edit a location for an existing class(sad path)
     When I go to the edit lessons page for "Star Wars 101"
-    And  I select "Jedi Academy" from "Location"
+    And  I select "Jedi Academy" from "location"
     And  I press "Update Lesson"
     Then I should see an error message
 
@@ -34,14 +34,14 @@ Feature: Add/Edit Lessons
     Then the instructor of "Star Wars 102" should be "Han Solo"
 
   Scenario: creating new lesson
-    When I go to New Lessons 
+    When I go to New Lessons
     And I fill in "Title" with "Why Alex Drexler is Great"
     And I fill in "Instructor" with "Alex Drexler"
     And I fill in "Grade level" with "3-5"
     And I fill in "Location" with "Dance Studio"
     And I fill in "Max enrollment" with "14"
-    And I press "Create Lesson" 
-    Then I should be on the show page for "Why Alex Drexler is Great" 
+    And I press "Create Lesson"
+    Then I should be on the show page for "Why Alex Drexler is Great"
 
 
 
