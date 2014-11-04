@@ -1,6 +1,12 @@
 source 'http://rubygems.org'
+  group :production do
+    gem 'pg'
+  end
 
-  gem 'pg'
+  group :development do
+    gem 'sqlite3'
+  end
+
   gem 'debugger2'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
