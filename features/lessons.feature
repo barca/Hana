@@ -23,9 +23,9 @@ Feature: Add/Edit Lessons
 
   Scenario: edit a location for an existing class(sad path)
     When I go to the edit lessons page for "Star Wars 101"
-    And  I select "Jedi Academy" from "Location"
+    And  I select "" from "Location"
     And  I press "Update Lesson"
-    Then I should see an error message
+    Then I should see "Location can't be blank"
 
   Scenario: add instructor to existing lesson
     When I go to the edit lessons page for "Star Wars 102"
@@ -37,8 +37,8 @@ Feature: Add/Edit Lessons
     When I go to New Lessons 
     And I fill in "Title" with "Why Alex Drexler is Great"
     And I fill in "Instructor" with "Alex Drexler"
-    And I fill in "Grade level" with "3-5"
-    And I fill in "Location" with "Dance Studio"
+    And I select "3-5" from "Grade level" 
+    And I select "galaxy away" from "Location"
     And I fill in "Max enrollment" with "14"
     And I press "Create Lesson" 
     Then I should be on the show page for "Why Alex Drexler is Great" 

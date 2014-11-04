@@ -22,7 +22,7 @@ When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |field, value|
   select field, :from => value
 end
 
-Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
+Then (/^I should see "(.*?)"$/) do |regexp|
   regexp = Regexp.new(regexp)
 
   if page.respond_to? :should
