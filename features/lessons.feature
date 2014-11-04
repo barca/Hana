@@ -23,7 +23,7 @@ Feature: Add/Edit Lessons
 
   Scenario: edit a location for an existing class(sad path)
     When I go to the edit lessons page for "Star Wars 101"
-    And  I select "Jedi Academy" from "location"
+    And  I select "Jedi Academy" from "Location"
     And  I press "Update Lesson"
     Then I should see an error message
 
