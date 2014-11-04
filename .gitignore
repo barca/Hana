@@ -14,3 +14,6 @@ coverage/
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+#Ignore development file 
+/db/development.sqlite3
