@@ -14,10 +14,10 @@ Feature: Add/Edit Lessons
 
       Given the following lessons exist:
  | title        | instructor| grade_level | starts_at           | ends_at       | location        | max_enrollment | description |
- | Star Wars 101| Han Solo  | 1-3         | 2014-10-10 2:00:00  | 2014-10-10 2:00:00 | galaxy far away | 7         | A           |
- | Star Wars 102| luke      | 3-5         | 2014-10-11 3:00:00  | 2014-10-10 2:00:00 | jedi academy    | 7 	   | B	 	 |
- | Death star   | Darth     | 6-8         | 2014-10-12 4:00:00  | 2014-10-10 2:00:00 | not death star  | 7 	   | C	 	 |
- | Dancing      | Usher     | 6-8         | 2014-10-13 5:00:00  |  2014-10-10 2:00:00| galaxy away     | 7 	   | D		 |
+ | Star Wars 101| Han Solo  | 1-3         | 2014-10-10 2:00:00  | 2014-10-10 2:10:00 | galaxy far away | 7         | A           |
+ | Star Wars 102| luke      | 3-5         | 2014-10-11 3:00:00  | 2014-10-11 4:00:00 | jedi academy    | 7 	   | B	 	 |
+ | Death star   | Darth     | 6-8         | 2014-10-12 4:00:00  | 2014-10-12 5:00:00 | not death star  | 7 	   | C	 	 |
+ | Dancing      | Usher     | 6-8         | 2014-10-13 5:00:00  |  2014-10-13 6:00:00| galaxy away     | 7 	   | D		 |
 
 
 
