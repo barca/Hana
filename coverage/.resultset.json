@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/models/lesson.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/models/lesson.rb": [
         1,
         1,
         1,
@@ -18,7 +18,7 @@
         null,
         null
       ],
-      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/controllers/lessons_controller.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/controllers/lessons_controller.rb": [
         1,
         1,
         null,
@@ -38,10 +38,17 @@
         0,
         null,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
         0,
+=======
+        1,
+        1,
+        1,
+        2,
+>>>>>>> 72d39820a170927259499f654fab9d9553c18c58
         null,
         0,
         null,
@@ -52,7 +59,7 @@
         2,
         2,
         2,
-        0,
+        4,
         null,
         2,
         null,
@@ -85,10 +92,17 @@
         null,
         1,
         null,
+<<<<<<< HEAD
         2,
         2,
         2,
         0,
+=======
+        1,
+        1,
+        1,
+        2,
+>>>>>>> 72d39820a170927259499f654fab9d9553c18c58
         null,
         2,
         null,
@@ -125,32 +139,36 @@
         null,
         null
       ],
-      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/controllers/application_controller.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/helpers/application_helper.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/helpers/classrooms_helper.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/classrooms_helper.rb": [
         1,
         null
       ],
-      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/helpers/lessons_helper.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/lessons_helper.rb": [
         1,
         null
       ],
-      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/models/classroom.rb": [
+      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/models/classroom.rb": [
         1,
         1,
         1,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1415070744
+=======
+    "timestamp": 1415069799
+>>>>>>> 72d39820a170927259499f654fab9d9553c18c58
   }
 }

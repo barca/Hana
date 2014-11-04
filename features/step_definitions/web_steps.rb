@@ -19,7 +19,7 @@ When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
 end
 
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |field, value|
-  select field, :from => value
+  select field, :from => value, visible: false
 end
 
 Then (/^I should see "(.*?)"$/) do |regexp|

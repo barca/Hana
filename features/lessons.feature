@@ -1,4 +1,4 @@
-Feature: Add/Edit Lessons 
+Feature: Add/Edit Lessons
 
   As an administrator
   I want to create a lesson with   the following information:
@@ -34,14 +34,14 @@ Feature: Add/Edit Lessons
     Then the instructor of "Star Wars 102" should be "Han Solo"
 
   Scenario: creating new lesson
-    When I go to New Lessons 
+    When I go to New Lessons
     And I fill in "Title" with "Why Alex Drexler is Great"
     And I fill in "Instructor" with "Alex Drexler"
     And I select "3-5" from "Grade level" 
     And I select "galaxy away" from "Location"
     And I fill in "Max enrollment" with "14"
-    And I press "Create Lesson" 
-    Then I should be on the show page for "Why Alex Drexler is Great" 
+    And I press "Create Lesson"
+    Then I should be on the show page for "Why Alex Drexler is Great"
 
 
 
