@@ -13,8 +13,11 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the edit lesson for "(.*)"$/ then edit_lesson_path(Lesson.find_by_title($1))
+    when /^the edit lessons page for "(.*)"$/ then edit_lesson_path(Lesson.find_by_title($1))
 
+    when /^New Lessons/ then new_lesson_path
+
+    when /^the show page for "(.*)"$/ then lesson_path(Lesson.find_by_title($1))
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

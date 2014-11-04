@@ -1,4 +1,15 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
+
+  gem 'debugger2'
+  gem 'sqlite3'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'simplecov'
+  gem 'simplecov-html'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

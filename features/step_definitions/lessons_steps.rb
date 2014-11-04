@@ -7,3 +7,9 @@ Given /the following lessons exist/ do |lessons_table|
   Lesson.create!(lesson)
   end
 end
+
+Then /the instructor of "(.*)" should be "(.*)"$/ do |arg1,arg2|
+	page.body.match /.*{arg1}.*{arg2}/
+end 
+
+
