@@ -1,10 +1,10 @@
-<h1>Calendar Example</h1>
+<h1>Calendar</h1>
 
 <%= link_to 'New Lesson', new_lesson_path %>
 <br></br>
 
 <%= month_calendar events: @lessons do |date, lessons| %>
-  <%= date.day %>
+  <strong><%= date.day %></strong>
 
   <% lessons.each do |lesson| %>
     <div>
@@ -14,7 +14,7 @@
   <% end %>
 <% end %>
 
-
+<!--
 <h1>Listing lessons</h1>
 
 <table>
@@ -54,3 +54,4 @@
 <br>
 
 <%= link_to 'New Lesson', new_lesson_path %>
+-->

@@ -15,16 +15,39 @@ class LessonsController < ApplicationController
   # GET /lessons/new
   def new
     @lesson = Lesson.new
+
+    #generate list of classrooms to select from for location
+    @classrooms = Classroom.all
+    @roomsList = [[]]
+    @classrooms.each do |classroom|
+      @roomsList << [classroom.name]
+    end
+    @classroomSelect = @roomsList
   end
 
   # GET /lessons/1/edit
   def edit
+        #generate list of classrooms to select from for location
+    @classrooms = Classroom.all
+    @roomsList = [[]]
+    @classrooms.each do |classroom|
+      @roomsList << [classroom.name]
+    end
+    @classroomSelect = @roomsList
   end
 
   # POST /lessons
   # POST /lessons.json
   def create
     @lesson = Lesson.new(lesson_params)
+
+    #generate list of classrooms to select from for location
+    @classrooms = Classroom.all
+    @roomsList = [[]]
+    @classrooms.each do |classroom|
+      @roomsList << [classroom.name]
+    end
+    @classroomSelect = @roomsList
 
     respond_to do |format|
       if @lesson.save
@@ -40,6 +63,14 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1
   # PATCH/PUT /lessons/1.json
   def update
+    #generate list of classrooms to select from for location
+    @classrooms = Classroom.all
+    @roomsList = [[]]
+    @classrooms.each do |classroom|
+      @roomsList << [classroom.name]
+    end
+    @classroomSelect = @roomsList
+
     respond_to do |format|
       if @lesson.update(lesson_params)
         format.html { redirect_to @lesson, notice: 'Lesson was successfully updated.' }
