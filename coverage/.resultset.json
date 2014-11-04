@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/models/lesson.rb": [
+      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/models/lesson.rb": [
         1,
         1,
         1,
@@ -12,13 +12,19 @@
         1,
         null,
         1,
-        10,
+        15,
         0,
         null,
         null,
         null
       ],
-      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/controllers/lessons_controller.rb": [
+      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/models/classroom.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/controllers/lessons_controller.rb": [
         1,
         1,
         null,
@@ -35,74 +41,60 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
-<<<<<<< HEAD
-        0,
-        0,
-        0,
-        0,
-=======
         1,
         1,
         1,
-        2,
->>>>>>> 72d39820a170927259499f654fab9d9553c18c58
+        1,
         null,
-        0,
+        1,
         null,
         null,
         null,
         1,
         null,
-        2,
-        2,
-        2,
-        4,
-        null,
-        2,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-<<<<<<< HEAD
         2,
         2,
         2,
-        0,
-=======
+        2,
+        null,
+        2,
+        null,
+        null,
+        null,
+        null,
         1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
         1,
         1,
         2,
->>>>>>> 72d39820a170927259499f654fab9d9553c18c58
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        2,
+        2,
+        2,
+        2,
         null,
         2,
         null,
@@ -130,45 +122,35 @@
         1,
         null,
         1,
-        4,
+        5,
         null,
         null,
         null,
         1,
-        2,
+        3,
         null,
         null
       ],
-      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/controllers/application_controller.rb": [
+      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/application_helper.rb": [
+      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/classrooms_helper.rb": [
+      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/helpers/classrooms_helper.rb": [
         1,
         null
       ],
-      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/helpers/lessons_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/models/classroom.rb": [
-        1,
-        1,
+      "/Users/joshualee/Desktop/sw engineering/Team-Hana/app/helpers/lessons_helper.rb": [
         1,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1415070744
-=======
-    "timestamp": 1415069799
->>>>>>> 72d39820a170927259499f654fab9d9553c18c58
+    "timestamp": 1415073204
   }
 }
