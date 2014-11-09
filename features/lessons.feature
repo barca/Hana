@@ -23,6 +23,7 @@ Feature: Add/Edit Lessons
 
      |name | max_occupancy | details | 
      |Gym  | 14            |         | 
+     |Dance Studio | 20    |         | 
 
   Scenario: edit a location for an existing class(sad path)
     When I go to the edit lessons page for "Star Wars 101"
@@ -37,7 +38,7 @@ Feature: Add/Edit Lessons
     Then the instructor of "Star Wars 102" should be "Han Solo"
 
   Scenario: creating new lesson
-    When I go to New Lessons
+    When I go to New Lesson
     And I fill in "Title" with "Why Alex Drexler is Great"
     And I fill in "Instructor" with "Alex Drexler"
     And I select "3-5" from "Grade level" 
@@ -45,6 +46,31 @@ Feature: Add/Edit Lessons
     And I fill in "Max enrollment" with "14"
     And I press "Create Lesson"
     Then I should be on the show page for "Why Alex Drexler is Great"
+
+  Scneario: set lessons to reoccur each week 
+    When I go to New Lesson 
+    And I fill in "Title" with "Drawing 101"
+    And I fill in "Instructor" with "Picasso"
+    And I select "3-5" from "Grade level" 
+    And I select "Dance Studio" from "Location"
+    And I fill in "Max enrollment" with "14"
+    And I check "Reoccur every week on Tuesday"
+    And I press "Create Lesson"
+    And I press "Calendar"
+    Then I should see "Drawing 101" on "November 4" and "November 11"
+
+  Scenario: Sort Calendar by grade level 
+     When I click "6-8" 
+     Then I should see "Death star" and "Dancing" 
+     And I should not see "Star Wars 101"
+
+  Scenario: See Weekly View
+     Given I create a lesson "Event 1" for "today" 
+     And I create a lesson "Event 2" for "seven days from now"
+     When I press "Weekly"
+     Then I should see "Event 1"
+     And I should not see "Event 2"
+
 
 
 
