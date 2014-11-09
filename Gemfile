@@ -1,7 +1,13 @@
 source 'http://rubygems.org'
+  group :production do
+    gem 'pg'
+  end
+
+  group :development do
+    gem 'sqlite3'
+  end
 
   gem 'debugger2'
-  gem 'sqlite3'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
@@ -13,8 +19,7 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use postgres as the database for Active Record
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
