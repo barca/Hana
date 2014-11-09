@@ -47,7 +47,7 @@ Feature: Add/Edit Lessons
     And I press "Create Lesson"
     Then I should be on the show page for "Why Alex Drexler is Great"
 
-  Scneario: set lessons to reoccur each week 
+  Scenario: set lessons to reoccur each week 
     When I go to New Lesson 
     And I fill in "Title" with "Drawing 101"
     And I fill in "Instructor" with "Picasso"
