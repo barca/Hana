@@ -2,13 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.day {
-	border-style: solid;
-	border-color: black;
-	border-width: 2px;
-	width: 150px;
-	height: 100px;
-	vertical-align: top
+body {
+	left: 0;
+	right: 0;
+}
+.weekCalendar {
+	.day {
+		border-style: solid;
+		border-color: black;
+		border-width: 2px;
+		width: 150px;
+		height: 450px;
+		vertical-align: top;
+		overflow: scroll;
+	}
+}
+.monthCalendar {
+	.day {
+		border-style: solid;
+		border-color: black;
+		border-width: 2px;
+		width: 150px;
+		height: 100px;
+		vertical-align: top;
+		overflow: scroll;
+	}
 }
 
 .prev-month {
@@ -17,4 +35,8 @@
 
 .next-month {
 	background-color: gainsboro;
+}
+
+.today {
+	background-color: rgb(184, 247, 199);
 }

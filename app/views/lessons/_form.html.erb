@@ -1,7 +1,7 @@
 <%= form_for(@lesson) do |f| %>
   <% if @lesson.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+      <h2><%= pluralize(@lesson.errors.count, "error") %> prevented this lesson from being saved:</h2>
 
       <ul>
       <% @lesson.errors.full_messages.each do |message| %>
@@ -12,35 +12,51 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <div>
+    <%= f.label :title %>
+    </div>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :instructor %><br>
+    <div>
+    <%= f.label :instructor %>
+    </div>
     <%= f.text_field :instructor %>
   </div>
   <div class="field">
-    <%= f.label :grade_level %><br>
+    <div>
+    <%= f.label :grade_level %>
+    </div>
     <%= f.select :grade_level, [[],['1-3'],['3-5'],['6-8']] %>
   </div>
   <div class="field">
-    <%= f.label :starts_at %><br>
+    <div>
+    <%= f.label :starts_at %>
+    </div>
     <%= f.datetime_select :starts_at %>
   </div>
   <div class="field">
-    <%= f.label :ends_at %><br>
+    <div>
+    <%= f.label :ends_at %>
+    </div>
     <%= f.datetime_select :ends_at %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
+    <div>
+    <%= f.label :location %>
+    </div>
     <%= f.select :location, @classroomSelect %>
   </div>
   <div class="field">
-    <%= f.label :max_enrollment %><br>
+    <div>
+    <%= f.label :max_enrollment %>
+    </div>
     <%= f.number_field :max_enrollment %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <div>
+    <%= f.label :description %>
+    </div>
     <%= f.text_area :description %>
   </div>
   <div class="actions">
