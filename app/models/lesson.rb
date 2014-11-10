@@ -4,7 +4,6 @@ class Lesson < ActiveRecord::Base
 
 	#form validation
 	validates :title, :instructor, :grade_level, :location, presence: true
-	validates :max_enrollment, numericality: { only_integer: true }
 	validate :ends_at_after_starts_at
 	validate :enrollment_not_negative
 
@@ -15,7 +14,7 @@ class Lesson < ActiveRecord::Base
 	end
 
 	def enrollment_not_negative
-		if max_enrollment < 1
+		if max_enrollment == nil || max_enrollment < 1
 			errors.add(:max_enrollment, "must be a positive value")
 		end
 	end
