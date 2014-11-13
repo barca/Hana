@@ -5,6 +5,25 @@ class LessonsController < ApplicationController
   # GET /lessons.json
   def index
     @lessons = Lesson.all
+
+    @all_grade_levels = Lesson.all_grade_levels
+    @selected_grade_levels = params[:grade_levels] || session[:grade_levels] || {}
+    @start_date = params[:start_date] || session[:start_date] || {}
+    
+    if @selected_grade_levels == {}
+      @selected_grade_levels = Hash[@all_grade_levels.map {|grade_level| [grade_level, grade_level]}]
+    end
+
+    if @start_date == {}
+      @start_date = Date.today
+    end
+
+    if params[:grade_levels] != session[:grade_levels] or params[:start_date] != session[:start_date]
+      session[:grade_levels] = @selected_grade_levels
+      session[:start_date] = @start_date
+      redirect_to :start_date => @start_date, :grade_levels => @selected_grade_levels and return
+    end
+    @lessons = Lesson.where(grade_level: @selected_grade_levels.keys)
   end
 
   # GET /lessons/1

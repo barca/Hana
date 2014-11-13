@@ -4,7 +4,19 @@
 
 <%= link_to 'New Lesson', new_lesson_path %>
 <br></br>
+<%= form_tag lessons_path, :method => :get, :id => 'grade_levels_form' do %>
+  Grade Level: 
+  <% @all_grade_levels.each do |grade_level| %>
+    <%= grade_level %>
+    <%= check_box_tag "grade_levels[#{grade_level}]", 1, @selected_grade_levels.include?(grade_level), :id => "grade_levels_#{grade_level}" %>
+  <% end %>
+  <%= submit_tag 'Refresh', :id => 'grade_levels_submit' %>
+<% end %>
+<br>
 
+<div class= "monthCalendar">
+<%= link_to 'View Current Month', 
+        lessons_path(:start_date => Date.today) %>
 <%= month_calendar events: @lessons do |date, lessons| %>
   <strong><%= date.day %></strong>
 
@@ -15,6 +27,7 @@
     </div>
   <% end %>
 <% end %>
+</div>
 
 <!--
 <h1>Listing lessons</h1>

@@ -7,6 +7,10 @@ class Lesson < ActiveRecord::Base
 	validate :ends_at_after_starts_at
 	validate :enrollment_not_negative
 
+	def self.all_grade_levels
+		%w(1-3 3-5 6-8)
+	end
+
 	def ends_at_after_starts_at
 		if ends_at < starts_at
 			errors.add(:ends_at, "can't be before Starts at")
