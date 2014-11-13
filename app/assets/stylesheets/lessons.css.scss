@@ -6,6 +6,15 @@ body {
 	left: 0;
 	right: 0;
 }
+.day {
+		border-style: solid;
+		border-color: black;
+		border-width: 2px;
+		width: 150px;
+		height: 100px;
+		vertical-align: top;
+		overflow: scroll;
+}
 .weekCalendar {
 	.day {
 		border-style: solid;
