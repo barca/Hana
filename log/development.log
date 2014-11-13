@@ -194,3 +194,42 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:29:00 
 
 
 Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-13 16:29:00 -0500
+
+
+Started GET "/lessons/new" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LessonsController#new as HTML
+  [1m[35mClassroom Load (1.1ms)[0m  SELECT "classrooms".* FROM "classrooms"
+  Rendered lessons/_form.html.erb (33.4ms)
+  Rendered lessons/new.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 122ms (Views: 108.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:30:33 -0500
