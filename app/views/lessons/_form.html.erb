@@ -38,13 +38,36 @@
     <div>
     <%= f.label :starts_at %>
     </div>
-    <%= f.datetime_select :starts_at %>
+    &nbsp Date
+    <%= f.date_select :starts_at %><br>
+    &nbsp Time
+    <%= f.time_select :starts_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
   <div class="field">
     <div>
     <%= f.label :ends_at %>
     </div>
-    <%= f.datetime_select :ends_at %>
+    &nbsp Date
+    <%= f.date_select :ends_at %><br>
+    &nbsp Time
+    <%= f.time_select :ends_at, :ignore_date => true, prompt: true, ampm: true %>
+  </div>
+  <div class="field">
+    <div>
+    <%= f.label 'Repeat On' %>
+    </div>
+    &nbsp Monday
+    <%= f.check_box :mon %>
+    Tuesday
+    <%= f.check_box :tue %>
+    Wednesday
+    <%= f.check_box :wed %>
+    Thursday
+    <%= f.check_box :thu %>
+    Friday
+    <%= f.check_box :fri %>
+    <br> &nbsp Until
+    <%= f.date_select :end_date %>
   </div>
   <div class="field">
     <div>
