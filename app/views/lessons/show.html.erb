@@ -11,9 +11,12 @@
 </p>
 
 <p>
-  <strong>Grade level:</strong>
-  <%= @lesson.grade_level %>
+  <strong>Grade Levels:</strong>
+  <%= "1-3" if @lesson.g1_3 == true %>
+  <%= "3-5" if @lesson.g3_5 == true %>
+  <%= "6-8" if @lesson.g6_8 == true %>
 </p>
+
 
 <p>
   <strong>Starts at:</strong>

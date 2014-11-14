@@ -3,17 +3,20 @@ class Lesson < ActiveRecord::Base
 	has_calendar
 
 	#form validation
-	validates :title, :instructor, :grade_level, :location, presence: true
+	validates :title, :instructor, :location, presence: true
 	validate :ends_at_after_starts_at
 	validate :enrollment_not_negative
-
-	def self.all_grade_levels
-		%w(1-3 3-5 6-8)
-	end
+	validate :some_grade_level_selected
 
 	def ends_at_after_starts_at
 		if ends_at < starts_at
 			errors.add(:ends_at, "can't be before Starts at")
+		end
+	end
+
+	def some_grade_level_selected
+		if g1_3 == false && g3_5 == false && g6_8 == false
+			errors.add("Grade Level", "must be selected")
 		end
 	end
 

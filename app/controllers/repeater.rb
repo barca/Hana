@@ -1,5 +1,5 @@
 def repeat(days, number = 0, start_date, end_date)
-    days_of_week = ['m',t','w','th','f','s','sun']
+    days_of_week = ['m','t','w','th','f','s','sun']
     #only showing those selected (ie. ['m'] means repeat once a week on monday)
     #number = number of repeats, and start_date is the date-time of the first event in series
     curr_day = start_date

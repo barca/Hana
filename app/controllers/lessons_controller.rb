@@ -6,24 +6,21 @@ class LessonsController < ApplicationController
   def index
     @lessons = Lesson.all
 
-    @all_grade_levels = Lesson.all_grade_levels
-    @selected_grade_levels = params[:grade_levels] || session[:grade_levels] || {}
-    @start_date = params[:start_date] || session[:start_date] || {}
-    
-    if @selected_grade_levels == {}
-      @selected_grade_levels = Hash[@all_grade_levels.map {|grade_level| [grade_level, grade_level]}]
-    end
+    @lessons13 = Lesson.where(g1_3: true)
+    @lessons35 = Lesson.where(g3_5: true)
+    @lessons68 = Lesson.where(g6_8: true)
 
+    #find date span to display on calendar
+    @start_date = params[:start_date] || session[:start_date] || {}
     if @start_date == {}
       @start_date = Date.today
     end
 
-    if params[:grade_levels] != session[:grade_levels] or params[:start_date] != session[:start_date]
-      session[:grade_levels] = @selected_grade_levels
+    if params[:start_date] != session[:start_date]
       session[:start_date] = @start_date
-      redirect_to :start_date => @start_date, :grade_levels => @selected_grade_levels and return
+      redirect_to :start_date => @start_date and return
     end
-    @lessons = Lesson.where(grade_level: @selected_grade_levels.keys)
+
   end
 
   # GET /lessons/1
@@ -119,6 +116,6 @@ class LessonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
-      params.require(:lesson).permit(:title, :instructor, :grade_level, :starts_at, :ends_at, :location, :max_enrollment, :description)
+      params.require(:lesson).permit(:title, :instructor, :starts_at, :ends_at, :location, :max_enrollment, :description, :g1_3, :g3_5, :g6_8)
     end
 end
