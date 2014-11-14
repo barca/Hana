@@ -1,9 +1,13 @@
 body {
+  margin: 0px;
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding-left: 15px;
+  margin-left: 15px solid green;
+  border-left: 15px solid rgb(50, 89, 50);
 }
 
 p, ol, ul, td {
@@ -21,7 +25,7 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #666;
+    color: #000;
   }
   &:hover {
     color: #fff;
@@ -71,7 +75,7 @@ div {
   float: left;
   padding-left: 100px;
   padding-right: 100px;
-  background-color: gainsboro;
+  background-color: rgb(184, 247, 199);
 }
 /*
 #main_header {

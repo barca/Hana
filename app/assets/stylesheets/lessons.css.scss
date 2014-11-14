@@ -20,18 +20,10 @@
 	}
 }
 
-.prev-month {
-	background-color: gainsboro;
-}
-
-.next-month {
+.prev-month, .next-month, .wday-0, .wday-6 {
 	background-color: gainsboro;
 }
 
 .today {
 	background-color: rgb(184, 247, 199);
-}
-
-#grade_levels_form {
-	color: #376b07;
 }
