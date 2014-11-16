@@ -1,9 +1,7 @@
 module LessonsHelper
 	def lessonsOn(date, lessons)
-    lessons = lessons.where("\"lessons\".\"starts_at\" < ?", date)
+    lessons = lessons.where("\"lessons\".\"starts_at\" < ?", date + 1)
     lessons = lessons.where("\"lessons\".\"end_date\" > ?" , date)
-   # lessons = lessons.where(start_at: date )
-   # lessons = lessons.where(["? < end_date", date])
 		days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
 		dayOfWeek = days_of_week[(date.wday)]
 		if dayOfWeek == "sun" || dayOfWeek == "sat"
