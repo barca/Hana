@@ -53,9 +53,6 @@ When /^(?:|I )check "(.*)"$/ do |button|
   check(button)
 end
 
-Then /^I should view (.*) every (.*) and (.*)/ do |day1,day2,day3|
-  pending 
-end 
  
 Then /^I should locate "(.*?)" in "(.*?)"$/ do |arg1, arg2|
   @id=arg1.should have_content(arg1)
@@ -64,6 +61,8 @@ end
 Then /^I should not locate "(.*?)" in "(.*?)"$/ do |arg1, arg2|
   @id=arg1.should !(have_content(arg1))
 end 
+
+
 
 Then(/^I should witness today$/) do 
    page.should have_css("div##{Date.today.day}")

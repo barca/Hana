@@ -14,7 +14,7 @@ Feature: Add/Edit Lessons
 
       Given the following lessons exist:
  | title        | instructor| g1_3 | g3_5 | g6_8    | starts_at           | ends_at            | location        | max_enrollment | description | mon |
- | Star Wars 101| Han Solo  | false | true| false  | 2013-10-10 2:00:00  | 2014-10-10 2:10:00 |Gym              | 7               | A           | true|
+ | Star Wars 101| Han Solo  | false | true| true  | 2013-10-10 2:00:00  | 2014-10-10 2:10:00 |Gym              | 7               | A           | true|
  | Star Wars 102| luke      | true  | false| true  | 2013-10-11 3:00:00  | 2014-10-11 4:00:00 |Jedi Academy     | 7 	            | B	 	        | true| 
  | Death star   | Darth     | true  |false | false |  2013-11-16 4:00:00 | 2014-10-12 5:00:00 |not death star   | 7 	            | C	   	      | true|
  | Dancing      | Usher     | true  | false | false | 2014-10-13 5:00:00  |  2014-10-13 6:00:00|Dance Studio     | 7 	            | D	      	  | true| 
@@ -58,7 +58,8 @@ Feature: Add/Edit Lessons
     And I check "lesson_fri"
     And I press "Create Lesson"
     And I click "Calendar"
-    Then I should view "Drawing 101" every "Tuesday" and "Friday"
+    Then I should locate "Drawing 101" in "calendar35" 
+    And I should not locate "Drawing 101" in "calendar13" 
 
   Scenario: See Lessons by grade level 
      When I go to the home page 
@@ -70,6 +71,16 @@ Feature: Add/Edit Lessons
      And I click "View Current Week"
      Then I should witness today 
      And I should not witness seven days from today 
+
+  Scenario: Create Repeating Classes 
+     When I go to the edit lessons page for "Star Wars 101"
+     And I check "lesson_tue"
+     And I check "lesson_thu"
+     And I press "Update Lesson"
+     And I click "Calendar"
+     Then I should locate "Star Wars 101" in "calendar68" 
+     And I should not locate "Star Wars 101" in "calendar13"  
+
 
 
 
