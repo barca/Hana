@@ -1,10 +1,12 @@
 <%= link_to 'View Current Week', 
     	lessons_path(:start_date => Date.today) %>
 
-<div class= "weekCalendar">
+<div class= "weekCalendar" id='calendar13'>
   <strong>1-3</strong>
 <%= week_calendar do |date| %>
-  <strong><%= date.day %></strong>
+  <div id= <%=date.day %> >
+    <strong><%= date.day %> </strong>
+  </div>
 
   <% lessonsOn(date, @lessons13).each do |lesson| %>
     <div>
@@ -16,11 +18,10 @@
 </div>
 </div>
 
-<div class= "weekCalendar">
+<div class= "weekCalendar" id='calendar35'>
   <strong>3-5</strong>
 <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
-  <strong><%= date.day %></strong>
-
+    <strong><%= date.day %></strong>
   <% lessonsOn(date, @lessons35).each do |lesson| %>
     <div>
       <%= link_to lesson.title, lesson %>
@@ -31,10 +32,10 @@
 </div>
 </div>
 
-<div class= "weekCalendar">
+<div class= "weekCalendar" id='calendar68'>
   <strong>6-8</strong>
 <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
-  <strong><%= date.day %></strong>
+    <strong><%= date.day %></strong>
 
   <% lessonsOn(date, @lessons68).each do |lesson| %>
     <div>

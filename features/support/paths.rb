@@ -18,6 +18,8 @@ module NavigationHelpers
     when /^New Lessons/ then new_lesson_path
 
     when /^the show page for "(.*)"$/ then lesson_path(Lesson.find_by_title($1))
+
+    when /^the home page/ then '/'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
