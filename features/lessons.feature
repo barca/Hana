@@ -13,11 +13,11 @@ Feature: Add/Edit Lessons
   Background: classes Instruction database
 
       Given the following lessons exist:
- | title        | instructor| grade_level | starts_at           | ends_at            | location        | max_enrollment | description |
- | Star Wars 101| Han Solo  | 1-3         | 2014-10-10 2:00:00  | 2014-10-10 2:10:00 |Gym              | 7              | A           |
- | Star Wars 102| luke      | 3-5         | 2014-10-11 3:00:00  | 2014-10-11 4:00:00 |Jedi Academy     | 7 	            | B	 	        |
- | Death star   | Darth     | 6-8         | 2014-10-12 4:00:00  | 2014-10-12 5:00:00 |not death star  | 7 	            | C	 	        |
- | Dancing      | Usher     | 6-8         | 2014-10-13 5:00:00  |  2014-10-13 6:00:00|Dance Studio     | 7 	            | D	      	  |
+ | title        | instructor| g1_3 | starts_at           | ends_at            | location        | max_enrollment | description |
+ | Star Wars 101| Han Solo  | true         | 2014-10-10 2:00:00  | 2014-10-10 2:10:00 |Gym              | 7               | A           |
+ | Star Wars 102| luke      | true         | 2014-10-11 3:00:00  | 2014-10-11 4:00:00 |Jedi Academy     | 7 	            | B	 	        |
+ | Death star   | Darth     | true         | 2014-10-12 4:00:00  | 2014-10-12 5:00:00 |not death star  | 7 	              | C	 	        |
+ | Dancing      | Usher     | true         | 2014-10-13 5:00:00  |  2014-10-13 6:00:00|Dance Studio     | 7 	            | D	      	 |
 
      And the following classrooms exist: 
 
@@ -38,7 +38,7 @@ Feature: Add/Edit Lessons
     Then the instructor of "Star Wars 102" should be "Han Solo"
 
   Scenario: creating new lesson
-    When I go to New Lesson
+    When I press "New Lesson"
     And I fill in "Title" with "Why Alex Drexler is Great"
     And I fill in "Instructor" with "Alex Drexler"
     And I select "3-5" from "Grade level" 
@@ -61,7 +61,7 @@ Feature: Add/Edit Lessons
 
   Scenario: Sort Calendar by grade level 
      When I click "6-8" 
-     Then I should see "Death star" and "Dancing" 
+     Then I should see "Death star" and "Dancing" g
      And I should not see "Star Wars 101"
 
   Scenario: See Weekly View

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141114030053) do
+ActiveRecord::Schema.define(version: 20141114203823) do
 
   create_table "classrooms", force: true do |t|
     t.string   "name"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 20141114030053) do
     t.boolean  "g1_3"
     t.boolean  "g3_5"
     t.boolean  "g6_8"
+    t.boolean  "mon"
+    t.boolean  "tue"
+    t.boolean  "wed"
+    t.boolean  "thu"
+    t.boolean  "fri"
+    t.date     "end_date"
   end
 
 end
