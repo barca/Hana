@@ -18,7 +18,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test "should create lesson" do
     assert_difference('Lesson.count') do
-      post :create, lesson: { description: @lesson.description, ends_at: @lesson.ends_at, grade_level: @lesson.grade_level, instructor: @lesson.instructor, location: @lesson.location, max_enrollment: @lesson.max_enrollment, starts_at: @lesson.starts_at, title: @lesson.title }
+      post :create, lesson: { description: @lesson.description, end_date: @lesson.end_date, ends_at: @lesson.ends_at, fri: @lesson.fri, g1_3: @lesson.g1_3, g3_5: @lesson.g3_5, g6_8: @lesson.g6_8, instructor: @lesson.instructor, location: @lesson.location, max_enrollment: @lesson.max_enrollment, mon: @lesson.mon, starts_at: @lesson.starts_at, thu: @lesson.thu, title: @lesson.title, tue: @lesson.tue, wed: @lesson.wed }
     end
 
     assert_redirected_to lesson_path(assigns(:lesson))
@@ -35,7 +35,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test "should update lesson" do
-    patch :update, id: @lesson, lesson: { description: @lesson.description, ends_at: @lesson.ends_at, grade_level: @lesson.grade_level, instructor: @lesson.instructor, location: @lesson.location, max_enrollment: @lesson.max_enrollment, starts_at: @lesson.starts_at, title: @lesson.title }
+    patch :update, id: @lesson, lesson: { description: @lesson.description, end_date: @lesson.end_date, ends_at: @lesson.ends_at, fri: @lesson.fri, g1_3: @lesson.g1_3, g3_5: @lesson.g3_5, g6_8: @lesson.g6_8, instructor: @lesson.instructor, location: @lesson.location, max_enrollment: @lesson.max_enrollment, mon: @lesson.mon, starts_at: @lesson.starts_at, thu: @lesson.thu, title: @lesson.title, tue: @lesson.tue, wed: @lesson.wed }
     assert_redirected_to lesson_path(assigns(:lesson))
   end
 

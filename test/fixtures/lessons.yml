@@ -3,19 +3,35 @@
 one:
   title: MyString
   instructor: MyString
-  grade_level: MyString
-  starts_at: 2014-11-02 15:52:12
-  ends_at: 2014-11-02 15:52:12
+  starts_at: 2014-11-17 10:00:26
+  ends_at: 2014-11-17 10:00:26
   location: MyString
   max_enrollment: 1
   description: MyText
+  g1_3: false
+  g3_5: true
+  g6_8: false
+  mon: false
+  tue: false
+  wed: false
+  thu: false
+  fri: false
+  end_date: 2014-11-17
 
 two:
   title: MyString
   instructor: MyString
-  grade_level: MyString
-  starts_at: 2014-11-02 15:52:12
-  ends_at: 2014-11-02 15:52:12
+  starts_at: 2014-11-17 10:00:27
+  ends_at: 2014-11-17 10:00:28
   location: MyString
   max_enrollment: 1
   description: MyText
+  g1_3: true
+  g3_5: false
+  g6_8: true
+  mon: false
+  tue: false
+  wed: false
+  thu: false
+  fri: false
+  end_date: 2014-11-17
