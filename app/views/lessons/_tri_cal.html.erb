@@ -8,7 +8,7 @@
     <strong><%= date.day %> </strong>
   </div>
 
-  <% lessonsOn(date, @lessons13).each do |lesson| %>
+  <% lessonsOn(date, @lessons13, "g1_3").each do |lesson| %>
     <div>
       <%= link_to lesson.title, lesson %>
       <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -22,7 +22,7 @@
   <strong>3-5</strong>
 <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
     <strong><%= date.day %></strong>
-  <% lessonsOn(date, @lessons35).each do |lesson| %>
+  <% lessonsOn(date, @lessons35, "g3_5").each do |lesson| %>
     <div>
       <%= link_to lesson.title, lesson %>
       <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -37,7 +37,7 @@
 <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
     <strong><%= date.day %></strong>
 
-  <% lessonsOn(date, @lessons68).each do |lesson| %>
+  <% lessonsOn(date, @lessons68, "g6_8").each do |lesson| %>
     <div>
       <%= link_to lesson.title, lesson %>
       <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
