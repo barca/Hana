@@ -28,18 +28,23 @@
 </p>
 
 <p>
-  <strong>Repeats on:</strong>
+  <strong><%= "From:" if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %></strong>
+  <strong><%= "Date:" if @lesson.mon == false && @lesson.tue == false && @lesson.wed == false && @lesson.thu == false && @lesson.fri == false %></strong>
+  <%= @lesson.starts_at.to_date.strftime("%B %d, %Y") %>
+
+  <strong><%= "to" if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %> </strong>
+  <%= @lesson.end_date.strftime("%B %d, %Y") if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %>
+</p>
+<p>
+</p>
+
+<p>
+  <strong><%= "Repeats every:" if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %></strong>
   <%= "Monday" if @lesson.mon == true %>
   <%= "Tuesday" if @lesson.tue == true %>
   <%= "Wednesday" if @lesson.wed == true %>
   <%= "Thursday" if @lesson.thu == true %>
   <%= "Friday" if @lesson.fri == true %>
-  <br> &nbsp
-  <strong>from</strong> 
-  <%= @lesson.starts_at.to_date.strftime("%B %d, %Y") %>
-
-  <strong>to</strong> 
-  <%= @lesson.end_date.strftime("%B %d, %Y") %>
 </p>
 
 <p>
