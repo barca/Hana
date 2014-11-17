@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <div>
-    <%= f.label 'Grade Levels' %>
+    <%= f.label :grade_levels %>
     </div>
     1-3
     <%= f.check_box :g1_3 %>
@@ -54,7 +54,7 @@
   </div>
   <div class="field">
     <div>
-    <%= f.label 'Repeat On' %>
+    <%= f.label 'Repeat every' %>
     </div>
     &nbsp Monday
     <%= f.check_box :mon %>
@@ -66,7 +66,7 @@
     <%= f.check_box :thu %>
     Friday
     <%= f.check_box :fri %>
-    <br> &nbsp Until
+    <br> &nbsp <%=f.label :until %>
     <%= f.date_select :end_date %>
   </div>
   <div class="field">
