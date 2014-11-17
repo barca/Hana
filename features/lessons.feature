@@ -12,18 +12,18 @@ Feature: Add/Edit Lessons
   So that I have all pertinent information and can access and edit at another time.
   Background: classes Instruction database
 
-      Given the following lessons exist:
- | title        | instructor| g1_3 | g3_5 | g6_8    | starts_at           | ends_at            | location        | max_enrollment | description | mon |
- | Star Wars 101| Han Solo  | false | true| true  | 2013-10-10 2:00:00  | 2014-10-10 2:10:00 |Gym              | 7               | A           | true|
- | Star Wars 102| luke      | true  | false| true  | 2013-10-11 3:00:00  | 2014-10-11 4:00:00 |Jedi Academy     | 7 	            | B	 	        | true| 
- | Death star   | Darth     | true  |false | false |  2013-11-16 4:00:00 | 2014-10-12 5:00:00 |not death star   | 7 	            | C	   	      | true|
- | Dancing      | Usher     | true  | false | false | 2014-10-13 5:00:00  |  2014-10-13 6:00:00|Dance Studio     | 7 	            | D	      	  | true| 
+      Given the following classrooms exist: 
 
-     And the following classrooms exist: 
+     |name         | max_occupancy | details | 
+     |Gym          | 14            |         | 
+     |Dance Studio | 20            |         | 
 
-     |name | max_occupancy | details | 
-     |Gym  | 14            |         | 
-     |Dance Studio | 20    |         | 
+     And the following lessons exist:
+ | title        | instructor| g1_3 | g3_5 | g6_8  | starts_at           | ends_at            | location        | max_enrollment         | description | mon  | end_date   |
+ | Star Wars 101| Han Solo  | false| true | true  | 2013-10-10 2:00:00  | 2014-10-10 2:10:00 |Gym              | 7                      | A           | true | 2014-12-30 |
+ | Star Wars 102| luke      | true | false| true  | 2013-10-11 3:00:00  | 2014-10-11 4:00:00 | Gym             | 7                      | B           | true | 2014-12-30 |
+ | Death star   | Darth     | true |false | false |  2013-11-16 4:00:00 | 2014-10-12 5:00:00 | Dance Studio    | 7                      | C           | true | 2014-12-30 |
+ | Dancing      | Usher     | true | false| false | 2014-10-13 5:00:00  |  2014-10-13 6:00:00| Dance Studio    | 7                      | D           | true | 2014-12-30 |
 
   Scenario: edit a location for an existing class(sad path)
     When I go to the edit lessons page for "Star Wars 101"
