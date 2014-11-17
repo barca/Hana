@@ -8,13 +8,12 @@ class Lesson < ActiveRecord::Base
 	validate :enrollment_not_negative
 	validate :some_grade_level_selected
 	validate :end_date_after_start_date
-  validate :lesson_max_more_than_classroom_capacity
+  	validate :lesson_max_more_than_classroom_capacity
 
 
   def lesson_max_more_than_classroom_capacity
-    classrooms = Classroom.all
-    classroom = classrooms.find_by(name: location)
-    if max_enrollment > classroom.max_occupancy
+    classroom = Classroom.find_by(name: location)
+    if classroom == nil || max_enrollment > classroom.max_occupancy
       errors.add(:max_enrollment, "is higher than classrom limit")
     end
   end
