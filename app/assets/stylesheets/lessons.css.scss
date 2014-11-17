@@ -7,14 +7,23 @@
 	border-color: black;
 	border-width: 2px;
 	width: 150px;
-	height: 100px;
-	vertical-align: top
+	vertical-align: top;
+}
+.weekCalendar {
+	.day {
+		height: 175px;
+	}
+}
+.monthCalendar {
+	.day {
+		height: 100px;
+	}
 }
 
-.prev-month {
+.prev-month, .next-month, .wday-0, .wday-6 {
 	background-color: gainsboro;
 }
 
-.next-month {
-	background-color: gainsboro;
+.today {
+	background-color: rgb(184, 247, 199);
 }

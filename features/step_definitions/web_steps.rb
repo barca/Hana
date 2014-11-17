@@ -41,6 +41,34 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   end
 end
 
-When /^(?:|I )press "([^"]*)"$/ do |button|
+When /^(?:|I )press "(.*)"$/ do |button|
   click_button(button)
 end
+
+When /^(?:|I )click "(.*)"$/ do |link|
+   click_link(link) 
+end 
+
+When /^(?:|I )check "(.*)"$/ do |button|
+  check(button)
+end
+
+ 
+Then /^I should locate "(.*?)" in "(.*?)"$/ do |arg1, arg2|
+  @id=arg1.should have_content(arg1)
+end 
+
+Then /^I should not locate "(.*?)" in "(.*?)"$/ do |arg1, arg2|
+  @id=arg1.should !(have_content(arg1))
+end 
+
+
+
+Then(/^I should witness today$/) do 
+   page.should have_css("div##{Date.today.day}")
+end
+
+Then(/^I should not witness seven days from today$/) do 
+   page.should !(have_css("div##{Date.today.day + 7}"))
+end
+

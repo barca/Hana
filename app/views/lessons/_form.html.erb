@@ -1,7 +1,7 @@
 <%= form_for(@lesson) do |f| %>
   <% if @lesson.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+      <h2><%= pluralize(@lesson.errors.count, "error") %> prevented this lesson from being saved:</h2>
 
       <ul>
       <% @lesson.errors.full_messages.each do |message| %>
@@ -12,35 +12,79 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <div>
+    <%= f.label :title %>
+    </div>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :instructor %><br>
+    <div>
+    <%= f.label :instructor %>
+    </div>
     <%= f.text_field :instructor %>
   </div>
   <div class="field">
-    <%= f.label :grade_level %><br>
-    <%= f.select :grade_level, [[],['1-3'],['3-5'],['6-8']] %>
+    <div>
+    <%= f.label :grade_levels %>
+    </div>
+    1-3
+    <%= f.check_box :g1_3 %>
+    3-5
+    <%= f.check_box :g3_5 %>
+    6-8
+    <%= f.check_box :g6_8 %>
   </div>
   <div class="field">
-    <%= f.label :starts_at %><br>
-    <%= f.datetime_select :starts_at %>
+    <div>
+    <%= f.label :starts_at %>
+    </div>
+    &nbsp Date
+    <%= f.date_select :starts_at %><br>
+    &nbsp Time
+    <%= f.time_select :starts_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
   <div class="field">
-    <%= f.label :ends_at %><br>
-    <%= f.datetime_select :ends_at %>
+    <div>
+    <%= f.label :ends_at %>
+    </div>
+    &nbsp Date
+    <%= f.date_select :ends_at %><br>
+    &nbsp Time
+    <%= f.time_select :ends_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
+    <div>
+    <%= f.label 'Repeat every' %>
+    </div>
+    &nbsp Monday
+    <%= f.check_box :mon %>
+    Tuesday
+    <%= f.check_box :tue %>
+    Wednesday
+    <%= f.check_box :wed %>
+    Thursday
+    <%= f.check_box :thu %>
+    Friday
+    <%= f.check_box :fri %>
+    <br> &nbsp <%=f.label :until %>
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <div>
+    <%= f.label :location %>
+    </div>
     <%= f.select :location, @classroomSelect %>
   </div>
   <div class="field">
-    <%= f.label :max_enrollment %><br>
-    <%= f.number_field :max_enrollment %>
+    <div>
+    <%= f.label :max_enrollment %>
+    </div>
+    <%= f.number_field :max_enrollment, min: 0 %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <div>
+    <%= f.label :description %>
+    </div>
     <%= f.text_area :description %>
   </div>
   <div class="actions">

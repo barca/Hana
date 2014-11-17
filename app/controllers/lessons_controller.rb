@@ -5,6 +5,22 @@ class LessonsController < ApplicationController
   # GET /lessons.json
   def index
     @lessons = Lesson.all
+
+    @lessons13 = Lesson.where(g1_3: true)
+    @lessons35 = Lesson.where(g3_5: true)
+    @lessons68 = Lesson.where(g6_8: true)
+
+    #find date span to display on calendar
+    @start_date = params[:start_date] || session[:start_date] || {}
+    if @start_date == {}
+      @start_date = Date.today
+    end
+
+    if params[:start_date] != session[:start_date]
+      session[:start_date] = @start_date
+      redirect_to :start_date => @start_date and return
+    end
+
   end
 
   # GET /lessons/1
@@ -100,6 +116,6 @@ class LessonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
-      params.require(:lesson).permit(:title, :instructor, :grade_level, :starts_at, :ends_at, :location, :max_enrollment, :description)
+      params.require(:lesson).permit(:title, :instructor, :starts_at, :ends_at, :location, :max_enrollment, :description, :g1_3, :g3_5, :g6_8, :mon, :tue, :wed, :thu, :fri, :end_date)
     end
 end

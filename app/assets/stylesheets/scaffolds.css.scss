@@ -1,9 +1,13 @@
 body {
+  margin: 0px;
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding-left: 15px;
+  margin-left: 15px solid green;
+  border-left: 15px solid rgb(50, 89, 50);
 }
 
 p, ol, ul, td {
@@ -21,7 +25,7 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #666;
+    color: #000;
   }
   &:hover {
     color: #fff;
@@ -40,9 +44,7 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+  color: #c00;
 }
 
 #error_explanation {
@@ -70,7 +72,15 @@ div {
 
 #nav_bar ul li {
   display: inline;
+  float: left;
   padding-left: 100px;
   padding-right: 100px;
-  background-color: gainsboro;
+  background-color: rgb(184, 247, 199);
 }
+/*
+#main_header {
+  color: #376b07;
+  font-size: 30px;
+  font-weight: bold;
+}
+*/

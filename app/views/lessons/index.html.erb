@@ -5,18 +5,14 @@
 <%= link_to 'New Lesson', new_lesson_path %>
 <br></br>
 
-<%= month_calendar events: @lessons do |date, lessons| %>
-  <strong><%= date.day %></strong>
+<!--
 
-  <% lessons.each do |lesson| %>
-    <div>
-      <%= link_to lesson.title, lesson %>
-      <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  <% end %>
-<% end %>
+-->
+
+<%= render 'tri_cal' %>
 
 <!--
+
 <h1>Listing lessons</h1>
 
 <table>
@@ -34,23 +30,7 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @lessons.each do |lesson| %>
-      <tr>
-        <td><%= lesson.title %></td>
-        <td><%= lesson.instructor %></td>
-        <td><%= lesson.grade_level %></td>
-        <td><%= lesson.starts_at %></td>
-        <td><%= lesson.ends_at %></td>
-        <td><%= lesson.location %></td>
-        <td><%= lesson.max_enrollment %></td>
-        <td><%= lesson.description %></td>
-        <td><%= link_to 'Show', lesson %></td>
-        <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
-        <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+
 </table>
 
 <br>
