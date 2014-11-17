@@ -3,11 +3,21 @@ class Lesson < ActiveRecord::Base
 	has_calendar
 
 	#form validation
-	validates :title, :instructor, :location, presence: true
+	validates :title, :instructor, :max_enrollment, :location, presence: true
 	validate :ends_at_after_starts_at
 	validate :enrollment_not_negative
 	validate :some_grade_level_selected
 	validate :end_date_after_start_date
+  validate :lesson_max_more_than_classroom_capacity
+
+
+  def lesson_max_more_than_classroom_capacity
+    classrooms = Classroom.all
+    classroom = classrooms.find_by(name: location)
+    if max_enrollment > classroom.max_occupancy
+      errors.add(:max_enrollment, "is higher than classrom limit")
+    end
+  end
 
 	def ends_at_after_starts_at
 		if ends_at < starts_at
