@@ -25,8 +25,9 @@
     <strong><%= date.day %></strong>
   <% lessonsOn(date, @lessons35, "g3_5").each do |lesson| %>
     <div>
-      <%= link_to lesson.title, lesson %>
-      <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <strong><%= link_to lesson.title, lesson %><br></strong>
+      <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
+      <%= lesson.location %>
     </div>
   <% end %>
 <% end %>
@@ -40,8 +41,9 @@
 
   <% lessonsOn(date, @lessons68, "g6_8").each do |lesson| %>
     <div>
-      <%= link_to lesson.title, lesson %>
-      <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <strong><%= link_to lesson.title, lesson %><br></strong>
+      <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
+      <%= lesson.location %>
     </div>
   <% end %>
 <% end %>
