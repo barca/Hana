@@ -43,7 +43,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1/edit
   def edit
-        #generate list of classrooms to select from for location
+    #generate list of classrooms to select from for location
     @classrooms = Classroom.all
     @roomsList = [[]]
     @classrooms.each do |classroom|

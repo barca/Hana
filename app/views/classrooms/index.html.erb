@@ -2,11 +2,11 @@
 
 <p id="notice"><%= notice %></p>
 
-<table>
+<table id="classrooms">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Max occupancy</th>
+      <th id="name_header"><%=link_to 'Name', classrooms_path(:sort => 'name')%></th>
+      <th id="occupancy_header"><%=link_to 'Max occupancy', classrooms_path(:sort => 'occupancy')%></th>  
       <th>Details</th>
       <th colspan="3"></th>
     </tr>
