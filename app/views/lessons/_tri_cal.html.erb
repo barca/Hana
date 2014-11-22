@@ -2,7 +2,7 @@
     	lessons_path(:start_date => Date.today) %>
 
 <div class= "weekCalendar" id='calendar13'>
-  <strong>1-3</strong>
+  <strong>Grades 1-3</strong>
 <%= week_calendar do |date| %>
   <div id= <%=date.day %> >
     <strong><%= date.day %> </strong>
@@ -19,7 +19,7 @@
 </div>
 
 <div class= "weekCalendar" id='calendar35'>
-  <strong>3-5</strong>
+  <strong>Grades 3-5</strong>
 <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
     <strong><%= date.day %></strong>
   <% lessonsOn(date, @lessons35, "g3_5").each do |lesson| %>
@@ -33,7 +33,7 @@
 </div>
 
 <div class= "weekCalendar" id='calendar68'>
-  <strong>6-8</strong>
+  <strong>Grades 6-8</strong>
 <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
     <strong><%= date.day %></strong>
 
