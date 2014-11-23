@@ -72,3 +72,17 @@ Then(/^I should not witness seven days from today$/) do
    page.should !(have_css("div##{Date.today.day + 7}"))
 end
 
+Then(/^"(.*?)" in "(.*?)" should be "(.*?)"$/) do |arg1, arg2, arg3|
+  pending # express the regexp above with the code you wish you had
+end
+
+
+When(/^I set "(.*?)" to "(.*?)"$/) do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should not see "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+
