@@ -12,11 +12,11 @@ Feature: Add/Edit Lessons
   So that I have all pertinent information and can access and edit at another time.
   Background: classes Instruction database
 
-      Given the following classrooms exist: 
+      Given the following classrooms exist:
 
-     |name         | max_occupancy | details | 
-     |Gym          | 14            |         | 
-     |Dance Studio | 20            |         | 
+     |name         | max_occupancy | details |
+     |Gym          | 14            |         |
+     |Dance Studio | 20            |         |
      |Computer Lab | 40            |         |
 
      And the following lessons exist:
@@ -42,51 +42,51 @@ Feature: Add/Edit Lessons
     When I go to New Lessons
     And I fill in "Title" with "Why Alex Drexler is Great"
     And I fill in "Instructor" with "Alex Drexler"
-    And I check "lesson_g1_3" 
+    And I check "lesson_g1_3"
     And I select "Gym" from "Location"
     And I fill in "Max enrollment" with "14"
     And I press "Create Lesson"
     Then I should be on the show page for "Why Alex Drexler is Great"
 
-  Scenario:ITERATION 2- set lessons to reoccur each week 
+  Scenario:ITERATION 2- set lessons to reoccur each week
     When I go to New Lessons
     And I fill in "Title" with "Drawing 101"
     And I fill in "Instructor" with "Picasso"
-    And I check "lesson_g3_5" 
+    And I check "lesson_g3_5"
     And I select "Dance Studio" from "Location"
     And I fill in "Max enrollment" with "14"
     And I check "lesson_wed"
     And I check "lesson_fri"
     And I press "Create Lesson"
     And I click "Calendar"
-    Then I should locate "Drawing 101" in "calendar35" 
-    And I should not locate "Drawing 101" in "calendar13" 
+    Then I should locate "Drawing 101" in "calendar35"
+    And I should not locate "Drawing 101" in "calendar13"
 
-  Scenario:ITERATION 2- See Lessons by grade level 
-     When I go to the home page 
-     Then I should locate "Star Wars 101" in "calendar35" 
+  Scenario:ITERATION 2- See Lessons by grade level
+     When I go to the home page
+     Then I should locate "Star Wars 101" in "calendar35"
      And I should not locate "Star Wars 102" in "calendar35"
 
   Scenario:ITERATION 2- See Weekly View
-     When I go to the home page 
+     When I go to the home page
      And I click "View Current Week"
-     Then I should witness today 
-     And I should not witness seven days from today 
+     Then I should witness today
+     And I should not witness seven days from today
 
-  Scenario:ITERATION 2- Create Repeating Classes 
+  Scenario:ITERATION 2- Create Repeating Classes
      When I go to the edit lessons page for "Star Wars 101"
      And I check "lesson_tue"
      And I check "lesson_thu"
      And I press "Update Lesson"
      And I click "Calendar"
-     Then I should locate "Star Wars 101" in "calendar68" 
-     And I should not locate "Star Wars 101" in "calendar13"  
+     Then I should locate "Star Wars 101" in "calendar68"
+     And I should not locate "Star Wars 101" in "calendar13"
 
-  Scenario: ITERATION 3- Color coded lesson in calendar view 
-    When I go to the home page 
+  Scenario: ITERATION 3- Color coded lesson in calendar view
+    When I go to the home page
     Then "Star Wars 101" in "calendar13" should be "red"
 
-  Scenario: ITERATION 3- See available classrooms during Lesson Creation 
+  Scenario: ITERATION 3- See available classrooms during Lesson Creation
     When I go to the edit lessons page for "Dancing"
     And I set "Starts at" to "2013-10-12 4:00:00"
     And I set "Ends at" to "2013-10-12 5:00:00"
@@ -94,7 +94,10 @@ Feature: Add/Edit Lessons
     Then I should see "Computer Lab"
     But I should not see "Dance Studio"
 
-  
+  Scenario: ITERATION 3- See Unused classrooms in Calendar view
+    When I go to the home page
+    Then on "2013-10-10" I should see "Computer Lab"
+    But I should not see "Gym"
 
 
 
