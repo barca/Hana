@@ -99,6 +99,13 @@ Feature: Add/Edit Lessons
     Then on "2013-10-10" I should see "Computer Lab"
     But I should not see "Gym"
 
+  Scenario: Gracefully fail when I try and make an event span multiple days
+    When I go to the edit lessons page for "Dancing"
+    And I set "Starts at" to "2013-10-12 4:00:00"
+    And I set "Ends at" to"2013-10-13 5:00:00"
+    And I press "Create Lesson"
+    Then I should see "Events cannot span multiple days"
+    But I should not see "Lesson was successfully"
 
 
 
