@@ -35,10 +35,13 @@ class LessonsController < ApplicationController
     #generate list of classrooms to select from for location
     @classrooms = Classroom.all
     @roomsList = [[]]
+    @colorsList = [[]]
     @classrooms.each do |classroom|
       @roomsList << [classroom.name]
+      @colorsList << [classroom.color]
     end
     @classroomSelect = @roomsList
+    @classroomsColorSelect = @colorsList
   end
 
   # GET /lessons/1/edit
@@ -46,10 +49,14 @@ class LessonsController < ApplicationController
     #generate list of classrooms to select from for location
     @classrooms = Classroom.all
     @roomsList = [[]]
+    @colorsList = [[]]
     @classrooms.each do |classroom|
       @roomsList << [classroom.name]
+      @colorsList << [classroom.color]
     end
     @classroomSelect = @roomsList
+    @classroomsColorSelect = @colorsList
+
   end
 
   # POST /lessons
@@ -60,10 +67,14 @@ class LessonsController < ApplicationController
     #generate list of classrooms to select from for location
     @classrooms = Classroom.all
     @roomsList = [[]]
+    @colorsList = [[]]
     @classrooms.each do |classroom|
       @roomsList << [classroom.name]
+      @colorsList << [classroom.color]
     end
     @classroomSelect = @roomsList
+    @classroomsColorSelect = @colorsList
+
 
     respond_to do |format|
       if @lesson.save
@@ -82,10 +93,14 @@ class LessonsController < ApplicationController
     #generate list of classrooms to select from for location
     @classrooms = Classroom.all
     @roomsList = [[]]
+    @colorsList = [[]]
     @classrooms.each do |classroom|
       @roomsList << [classroom.name]
+      @colorsList << [classroom.color]
     end
     @classroomSelect = @roomsList
+    @classroomsColorSelect = @colorsList
+
 
     respond_to do |format|
       if @lesson.update(lesson_params)
@@ -116,6 +131,6 @@ class LessonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
-      params.require(:lesson).permit(:title, :instructor, :starts_at, :ends_at, :location, :max_enrollment, :description, :g1_3, :g3_5, :g6_8, :mon, :tue, :wed, :thu, :fri, :end_date)
+      params.require(:lesson).permit(:title, :instructor, :starts_at, :ends_at, :location, :max_enrollment, :description, :g1_3, :g3_5, :g6_8, :mon, :tue, :wed, :thu, :fri, :end_date, :color)
     end
 end
