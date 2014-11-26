@@ -1,7 +1,6 @@
 <%= link_to 'View Current Week', 
     	lessons_path(:start_date => Date.today) %>
 
-
 <table>
   <tr id='1-3row'>
     <th class='grades'>
@@ -15,7 +14,7 @@
           </div>
           <% lessonsOn(date, @lessons13, "g1_3").each do |lesson| %>
             <div class='lessonBlock'>
-              <strong><%= link_to lesson.title, lesson %><br></strong>
+              <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %><br></strong>
               <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
               <%= lesson.location %>
             </div>
@@ -37,7 +36,7 @@
         </div>
         <% lessonsOn(date, @lessons35, "g3_5").each do |lesson| %>
           <div class='lessonBlock'>
-            <strong><%= link_to lesson.title, lesson %><br></strong>
+            <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %><br></strong>
             <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
             <%= lesson.location %>
           </div>
@@ -60,7 +59,7 @@
 
           <% lessonsOn(date, @lessons68, "g6_8").each do |lesson| %>
             <div>
-              <strong><%= link_to lesson.title, lesson %><br></strong>
+              <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}"  %><br></strong>
               <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
               <%= lesson.location %>
             </div>
@@ -70,3 +69,4 @@
     </th>
   </tr>
 </table>
+

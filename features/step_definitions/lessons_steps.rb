@@ -15,9 +15,12 @@ And /the following classrooms exist/ do |classrooms_table|
   Classroom.create!(classroom)
   end
 end
+Then (/^on "(.*?)" I should see "(.*?)"$/) do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end
 
 Then /the instructor of "(.*)" should be "(.*)"$/ do |arg1,arg2|
 	page.body.match /.*{arg1}.*{arg2}/
-end 
+end
 
 
