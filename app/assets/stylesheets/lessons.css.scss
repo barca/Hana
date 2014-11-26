@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .day {
+	background-color: white;
 	border-style: solid;
 	border-color: black;
 	border-width: 2px;
@@ -13,13 +14,24 @@
 	.day {
 		height: 175px;
 	}
+	.calendarDate {
+		color: #325932;
+		text-align: left;
+	}
+	.lessonBlock {
+		background: yellow;
+		border: 2px solid black;
+		margin-bottom: 1px;
+	}
+	.classroomA {
+		background: red;
+	}
 }
 .monthCalendar {
 	.day {
 		height: 100px;
 	}
 }
-
 .prev-month, .next-month, .wday-0, .wday-6 {
 	background-color: gainsboro;
 }
