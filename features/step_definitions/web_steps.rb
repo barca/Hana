@@ -65,11 +65,11 @@ end
 
 
 Then(/^I should witness today$/) do 
-   page.should have_css("div##{Date.today.day}")
+   page.has_content?('#{Date.today.day}')
 end
 
 Then(/^I should not witness seven days from today$/) do 
-   page.should !(have_css("div##{Date.today.day + 7}"))
+   page.should have_no_content('#{Date.today.day} + 7')
 end
 
 Then(/^"(.*?)" in "(.*?)" should be "(.*?)"$/) do |arg1, arg2, arg3|
