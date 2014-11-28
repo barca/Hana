@@ -63,4 +63,5 @@
 </p>
 
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Delete', @lesson, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', lessons_path %>

@@ -1,49 +1,74 @@
 <%= link_to 'View Current Week', 
     	lessons_path(:start_date => Date.today) %>
 
-<div class= "weekCalendar" id='calendar13'>
-  <strong>1-3</strong>
-<%= week_calendar do |date| %>
-  <div id= <%=date.day %> >
-    <strong><%= date.day %> </strong>
-  </div>
+<table>
+  
+  <tr id='1-3row'>
+    <th class='grades'>
+      <strong>Grades 1-3</strong>
+    </th>
+    <th>
+      <div class= "weekCalendar" id='calendar13'>    
+        <%= week_calendar do |date| %>
+          <div class= 'calendarDate'>
+            <strong><%= date.day %></strong>
+          </div>
+          <% lessonsOn(date, @lessons13, "g1_3").each do |lesson| %>
+            <div class='lessonBlock'>
+              <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %></strong><br>
+              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
+              <%= lesson.location %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </th>
+  </tr>
 
-  <% lessonsOn(date, @lessons13, "g1_3").each do |lesson| %>
-    <div>
-      <%= link_to lesson.title, lesson %>
-      <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  <% end %>
-<% end %>
-</div>
-</div>
+  <tr id='3-5row'>
+    <th class='grades'>
+      <strong>Grades 3-5</strong>
+    </th>
+    <th>
+      <div class= "weekCalendar" id='calendar35'>
+      <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
+        <div class= 'calendarDate'>
+          <strong><%= date.day %></strong>
+        </div>
+        <% lessonsOn(date, @lessons35, "g3_5").each do |lesson| %>
+          <div class='lessonBlock'>
+            <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %></strong><br>
+            <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
+            <%= lesson.location %>
+          </div>
+        <% end %>
+      <% end %>
+      </div>
+    </th>
+  </tr>
 
-<div class= "weekCalendar" id='calendar35'>
-  <strong>3-5</strong>
-<%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
-    <strong><%= date.day %></strong>
-  <% lessonsOn(date, @lessons35, "g3_5").each do |lesson| %>
-    <div>
-      <%= link_to lesson.title, lesson %>
-      <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  <% end %>
-<% end %>
-</div>
-</div>
+  <tr id='6-8row'>
+    <th class='grades'>
+      <strong>Grades 6-8</strong>
+    </th>
+    <th>
+      <div class= "weekCalendar" id='calendar68'>
+        <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
+          <div class= 'calendarDate'>
+            <strong><%= date.day %></strong>
+          </div>
 
-<div class= "weekCalendar" id='calendar68'>
-  <strong>6-8</strong>
-<%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
-    <strong><%= date.day %></strong>
+          <% lessonsOn(date, @lessons68, "g6_8").each do |lesson| %>
+            <div class='lessonBlock'>
+              <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %></strong><br>
+              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
+              <%= lesson.location %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </th>
+  </tr>
 
-  <% lessonsOn(date, @lessons68, "g6_8").each do |lesson| %>
-    <div>
-      <%= link_to lesson.title, lesson %>
-      <%= link_to '(Delete)', lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  <% end %>
-<% end %>
-</div>
+</table>
 
-</div>

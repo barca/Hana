@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root 'lessons#index'
 
+  get 'classroom/available' => 'classrooms#available'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

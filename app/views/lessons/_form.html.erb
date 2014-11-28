@@ -57,13 +57,13 @@
     <%= f.label 'Repeat every' %>
     </div>
     &nbsp Monday
-    <%= f.check_box :mon %>
+    <%= f.check_box :mon %>|
     Tuesday
-    <%= f.check_box :tue %>
+    <%= f.check_box :tue %>|
     Wednesday
-    <%= f.check_box :wed %>
+    <%= f.check_box :wed %>|
     Thursday
-    <%= f.check_box :thu %>
+    <%= f.check_box :thu %>|
     Friday
     <%= f.check_box :fri %>
     <br> &nbsp <%=f.label :until %>
@@ -80,6 +80,12 @@
     <%= f.label :max_enrollment %>
     </div>
     <%= f.number_field :max_enrollment, min: 0 %>
+  </div>
+  <div class="field">
+    <div>
+    <%= f.label :color%>
+    </div>
+    <%= f.select :color, @classroomsColorSelect %>
   </div>
   <div class="field">
     <div>

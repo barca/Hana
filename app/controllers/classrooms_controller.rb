@@ -4,7 +4,19 @@ class ClassroomsController < ApplicationController
   # GET /classrooms
   # GET /classrooms.json
   def index
-    @classrooms = Classroom.all
+    #determine ordering of classrooms
+    sort = params[:sort] || session[:sort]
+    case sort
+    when 'name'
+      ordering = :name
+    when 'occupancy'
+      ordering = 'max_occupancy DESC'
+    end
+
+    if params[:sort] != session[:sort]
+      session[:sort] = sort
+    end
+    @classrooms = Classroom.all.order(ordering)
   end
 
   # GET /classrooms/1
@@ -69,6 +81,6 @@ class ClassroomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def classroom_params
-      params.require(:classroom).permit(:name, :max_occupancy, :details)
+      params.require(:classroom).permit(:name, :max_occupancy, :details, :color)
     end
 end
