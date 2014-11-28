@@ -42,11 +42,20 @@ class LessonsController < ApplicationController
     end
     @classroomSelect = @roomsList
     @classroomsColorSelect = @colorsList
+
+    #If we're passed a date, store it
+    if params[:date] != nil
+      #sending date through params turns it into a string, convert back
+      @selected_date = Date.parse params[:date] 
+    else 
+      @selected_date = Date.today
+    end
+
   end
 
   # GET /lessons/1/edit
   def edit
-    #generate list of classrooms to select from for location
+    #generate list of   classrooms to select from for location
     @classrooms = Classroom.all
     @roomsList = [[]]
     @colorsList = [[]]
@@ -56,6 +65,14 @@ class LessonsController < ApplicationController
     end
     @classroomSelect = @roomsList
     @classroomsColorSelect = @colorsList
+    
+    #If we're passed a date, store it
+    if params[:date] != nil
+      #sending date through params turns it into a string, convert back
+      @selected_date = Date.parse params[:date] 
+    else 
+      @selected_date = Date.today
+    end
 
   end
 

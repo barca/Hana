@@ -11,7 +11,7 @@
       <div class= "weekCalendar" id='calendar13'>    
         <%= week_calendar do |date| %>
           <div class= 'calendarDate'>
-            <strong><%= date.day %></strong>
+            <strong><%= link_to date.day, controller: "lessons", action: "new", date: date %></strong>
           </div>
           <% lessonsOn(date, @lessons13, "g1_3").each do |lesson| %>
             <div class='lessonBlock'>
