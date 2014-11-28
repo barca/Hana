@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .day {
+	background-color: white;
 	border-style: solid;
 	border-color: black;
 	border-width: 2px;
@@ -13,13 +15,24 @@
 	.day {
 		height: 175px;
 	}
+	.calendarDate {
+		color: #325932;
+		text-align: left;
+	}
+	.lessonBlock {
+		background-image: url("lessonBlockBackground.png"); 
+		border: 2px solid black;
+		margin-bottom: 1px;
+	}
+	.classroomA {
+		background: red;
+	}
 }
 .monthCalendar {
 	.day {
 		height: 100px;
 	}
 }
-
 .prev-month, .next-month, .wday-0, .wday-6 {
 	background-color: gainsboro;
 }
@@ -27,3 +40,4 @@
 .today {
 	background-color: rgb(184, 247, 199);
 }
+
