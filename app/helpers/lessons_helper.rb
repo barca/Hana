@@ -10,13 +10,19 @@ module LessonsHelper
 		dayOfWeek = days_of_week[(date.wday)]
 		if dayOfWeek == "sun" || dayOfWeek == "sat"
 			#classes don't reccur on weekends
-			return classes.where(starts_at: date.beginning_of_day..date.end_of_day)
+			return classes.where(starts_at: date.beginning_of_day..date.end_of_day).order(:starts_at)
 		else
 			dayStart = "#{date.strftime("%Y-%m-%d")} 05:00:00.000000"
 			dayTomorrow = date + 1
 			dayEnd = "#{dayTomorrow.strftime("%Y-%m-%d")} 04:59:59.999999"
 			#SQL to return lessons for the appropriate grade level that occur on a given day
-			return Lesson.find_by_sql("SELECT \"lessons\".* FROM \"lessons\"  WHERE (\"lessons\".\"#{grade_level}\" = \'t\' AND (\"lessons\".\"starts_at\" < \'#{dayTomorrow}\') AND (\"lessons\".\"end_date\" > \'#{dayYesterday}\')) AND ((\"lessons\".\"starts_at\" BETWEEN \'#{dayStart}\' AND \'#{dayEnd}\') OR \"lessons\".\"#{dayOfWeek}\" = \'t\') ORDER BY 'starts_at'")
+			return classes.find_by_sql("SELECT * FROM \"lessons\"  
+												WHERE (\"lessons\".\"#{grade_level}\" = \'t\' 
+													AND (\"lessons\".\"starts_at\" < \'#{dayTomorrow}\') 
+													AND (\"lessons\".\"end_date\" > \'#{dayYesterday}\') 
+													AND ((\"lessons\".\"starts_at\" BETWEEN \'#{dayStart}\' AND \'#{dayEnd}\') 
+														OR (\"lessons\".\"#{dayOfWeek}\" = \'t\'))) 
+												ORDER BY TIME(\"lessons\".\"starts_at\")")
 		end
 	end
 end 
