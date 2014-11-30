@@ -84,7 +84,7 @@ Feature: Add/Edit Lessons
 
   Scenario: ITERATION 3- Color coded lesson in calendar view
     When I go to the home page
-    Then "Star Wars 101" in "calendar13" should be "red"
+    Then "Star Wars 102" in "calendar13" should be "red"
 
   Scenario: ITERATION 3- See available classrooms during Lesson Creation
     When I go to the edit lessons page for "Dancing"
