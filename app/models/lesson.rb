@@ -7,17 +7,9 @@ class Lesson < ActiveRecord::Base
 	validate :ends_at_after_starts_at
 	validate :enrollment_not_negative
 	validate :some_grade_level_selected
-	validate :end_date_after_start_date
   	validate :lesson_max_more_than_classroom_capacity
-	validate :lesson_spans_many_days
 
-  
-    def lesson_spans_many_days
-      if ends_at.day != starts_at.day
-        errors.add(:starts_at, message="Events cannot span multiple days.") 
-      end
-    end
-        
+
 
 	def lesson_max_more_than_classroom_capacity
 	  classroom = Classroom.find_by(name: location)
@@ -28,7 +20,7 @@ class Lesson < ActiveRecord::Base
 	end
 
 	def ends_at_after_starts_at
-		if ends_at < starts_at
+		if ends_at.to_i < starts_at.to_i
 			errors.add(:ends_at, "can't be before Starts at")
 		end
 	end
@@ -45,11 +37,4 @@ class Lesson < ActiveRecord::Base
 		end
 	end
 
-	def end_date_after_start_date
-		if mon || tue || wed || thu || fri
-			if starts_at > end_date.end_of_day
-				errors.add(:until, "date must occur after start date")
-			end
-		end
-	end
 end

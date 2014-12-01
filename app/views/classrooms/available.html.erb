@@ -1,1 +1,34 @@
 <h1>Available Classrooms</h1>
+<%= link_to "Back", new_lesson_path %>
+
+<%= form_tag classroom_available_path, :method => :get, :id => 'times_form' do %>
+  <%= hidden_field_tag "title_sort", true if @title_header %>
+  View Classrooms:<br>
+  From: <%= time_select :starts_at, :ignore_date => true, prompt: true, ampm: true %> <br>
+  To:  <%= time_select :ends_at, :ignore_date => true, prompt: true, ampm: true %> <br>
+
+  <%= submit_tag 'Refresh', :id => 'times_submit' %>
+<% end %>
+
+<table id="classrooms_available">
+  <thead>
+    <tr>
+      <th id="name_header"><%=link_to 'Name', classroom_available_path(:sort => 'name')%></th>
+      <th id="occupancy_header"><%=link_to 'Max occupancy', classroom_available_path(:sort => 'occupancy')%></th>  
+      <th>Details</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @available_classrooms.each do |classroom| %>
+      <tr>
+        <td><%= classroom.name %></td>
+        <td><%= classroom.max_occupancy %></td>
+        <td><%= classroom.details %></td>
+        <td><%= link_to 'Select', new_lesson_path %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

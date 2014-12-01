@@ -15,16 +15,16 @@ Feature: Add/Edit Lessons
       Given the following classrooms exist:
 
      |name         | max_occupancy | details | color|
-     |Gym          | 14            |         | red  |
+     |Gym          | 14            |         | Red  |
      |Dance Studio | 20            |         | blue |
      |Computer Lab | 40            |         | green|
 
      And the following lessons exist:
- | title        | instructor| g1_3 | g3_5 | g6_8  | starts_at           | ends_at            | location        | max_enrollment         | description | mon  | end_date   | color |
- | Star Wars 101| Han Solo  | false| true | true  | 2013-10-10 2:00:00  | 2013-10-10 3:00:00 |Gym              | 7                      | A           | true | 2013-10-10 | red|
- | Star Wars 102| luke      | true | false| true  | 2013-10-11 3:00:00  | 2013-10-11 4:00:00 | Gym             | 7                      | B           | true | 2014-12-30 | red|
- | Death star   | Darth     | true |false | false |  2013-10-12 4:00:00 | 2013-10-12 5:00:00 | Dance Studio    | 7                      | C           | true | 2014-12-30 | blue |
- | Dancing      | Usher     | true | false| false | 2013-10-13 5:00:00  |  2013-10-13 6:00:00| Dance Studio    | 7                      | D           | true | 2014-12-30 | blue|
+ | title        | instructor| g1_3 | g3_5 | g6_8  | starts_at           | ends_at            | location        | max_enrollment         | description | mon  | end_date   | color | start_date|
+ | Star Wars 101| Han Solo  | false| true | true  | 2013-10-10 2:00:00  | 2013-10-10 3:00:00 |Gym              | 7                      | A           | true | 2013-10-10 | Red| 2013-10-10|
+ | Star Wars 102| luke      | true | false| true  | 2013-10-11 3:00:00  | 2013-10-11 4:00:00 | Gym             | 7                      | B           | true | 2014-12-30 | Red|2013-10-11|
+ | Death star   | Darth     | true |false | false |  2013-10-12 4:00:00 | 2013-10-12 5:00:00 | Dance Studio    | 7                      | C           | true | 2014-12-30 | blue |2013-10-12|
+ | Dancing      | Usher     | true | false| false | 2013-10-13 5:00:00  |  2013-10-13 6:00:00| Dance Studio    | 7                      | D           | true | 2014-12-30 | blue|2013-10-13|
 
   Scenario: ITERATION 1- edit a location for an existing class(sad path)
     When I go to the edit lessons page for "Star Wars 101"
@@ -88,13 +88,12 @@ Feature: Add/Edit Lessons
 
   Scenario: ITERATION 3- Color coded lesson in calendar view
     When I go to the home page
-    Then "Star Wars 102" in "calendar13" should be "red"
+    Then the color of "Star Wars 102" in "calendar13" should be "Red"
 
   Scenario: ITERATION 3- See available classrooms during Lesson Creation
     When I go to the edit lessons page for "Dancing"
     And I set lesson start at to "2014-December-1" "3 PM:00"
     And I set lesson end time to "5 PM:00"
-
     And I click "See available classrooms"
     Then I should see "Computer Lab"
     But I should not see "Dance Studio"
@@ -104,13 +103,13 @@ Feature: Add/Edit Lessons
     Then on "2013-10-10" I should see "Computer Lab"
     But I should not see "Gym"
 
-  Scenario: ITERATION 3- Gracefully fail when I try and make an event span multiple days
+  Scenario: ITERATION 3- Gracefully fail when I try to end before it begins
     When I go to the edit lessons page for "Dancing"
     And I set lesson start at to "2013-September-10" "06 PM:00"
-    And I set lesson end time to "7 PM:00"
-    And I press "Create Lesson"
-    Then I should see "Events cannot span multiple days"
-    But I should not see "Lesson was successfully"
+    And I set lesson end time to "3 PM:00"
+    And I press "Update Lesson"
+    Then I should see "Ends at can't be before Starts at"
+    But I should not see "Lesson was successfully created"
 
 
 
