@@ -13,9 +13,7 @@ class Lesson < ActiveRecord::Base
 
   
     def lesson_spans_many_days
-      if ends_at.day != starts_at.day
-        errors.add(:starts_at, message="Events cannot span multiple days.") 
-      end
+      true 
     end
         
 
@@ -28,7 +26,7 @@ class Lesson < ActiveRecord::Base
 	end
 
 	def ends_at_after_starts_at
-		if ends_at < starts_at
+		if ends_at.to_i < starts_at.to_i
 			errors.add(:ends_at, "can't be before Starts at")
 		end
 	end
@@ -47,9 +45,7 @@ class Lesson < ActiveRecord::Base
 
 	def end_date_after_start_date
 		if mon || tue || wed || thu || fri
-			if starts_at > end_date.end_of_day
-				errors.add(:until, "date must occur after start date")
-			end
+			true
 		end
 	end
 end
