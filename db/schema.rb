@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126025052) do
+ActiveRecord::Schema.define(version: 20141129035506) do
 
   create_table "classrooms", force: true do |t|
     t.string   "name"
@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 20141126025052) do
   create_table "lessons", force: true do |t|
     t.string   "title"
     t.string   "instructor"
-    t.datetime "starts_at"
-    t.datetime "ends_at"
     t.string   "location"
     t.integer  "max_enrollment"
     t.text     "description"
@@ -42,6 +40,9 @@ ActiveRecord::Schema.define(version: 20141126025052) do
     t.boolean  "fri"
     t.date     "end_date"
     t.string   "color"
+    t.time     "starts_at"
+    t.time     "ends_at"
+    t.date     "start_date"
   end
 
 end

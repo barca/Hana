@@ -39,7 +39,7 @@
     <%= f.label :starts_at %>
     </div>
     &nbsp Date
-    <%= f.date_select :starts_at, selected: @selected_date %><br>
+    <%= f.date_select :start_date, selected: @selected_date %><br>
     &nbsp Time
     <%= f.time_select :starts_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
@@ -47,8 +47,6 @@
     <div>
     <%= f.label :ends_at %>
     </div>
-    &nbsp Date
-    <%= f.date_select :ends_at, selected: @selected_date%><br>
     &nbsp Time
     <%= f.time_select :ends_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
