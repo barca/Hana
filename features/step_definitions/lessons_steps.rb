@@ -1,5 +1,25 @@
 # Add a declarative step here for populating the DB with lessons.
-
+When (/^I set lesson start at to "(.*?)" "(.*?)"$/) do | date, time|
+  time_chunks = date.split("-");
+  x = 1
+  time_chunks.each do |fill|
+    select fill,:from => "lesson_start_date_#{x}i"
+    x += 1
+  end
+  time_chunks = time.split(":")
+  time_chunks.each do |fill|
+    select fill,:from => "lesson_starts_at_#{x}i"
+    x += 1
+  end
+end
+When (/^I set lesson end time to "(.*?)"$/) do |time|
+  time_chunks = time.split(":")
+  x = 4
+  time_chunks.each do |fill|
+    select fill, :from => "lesson_ends_at_#{x}i"
+    x += 1
+  end
+end
 Given /the following lessons exist/ do |lessons_table|
   lessons_table.hashes.each do |lesson|
     # each returned element will be a hash whose key is the table header.
