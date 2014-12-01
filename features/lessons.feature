@@ -94,7 +94,7 @@ Feature: Add/Edit Lessons
     When I go to the edit lessons page for "Dancing"
     And I set lesson start at to "2014-December-1" "3 PM:00"
     And I set lesson end time to "5 PM:00"
-    And I click "See available classrooms"
+    And I click "See Available Classrooms"
     Then I should see "Computer Lab"
     But I should not see "Dance Studio"
 
