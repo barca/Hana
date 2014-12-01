@@ -73,7 +73,11 @@ Then(/^I should not witness seven days from today$/) do
 end
 
 Then(/^"(.*?)" in "(.*?)" should be "(.*?)"$/) do |arg1, arg2, arg3|
-  pending # express the regexp above with the code you wish you had
+  pending
+  #page.find('#'+arg2).find("a",:text=>arg1).native.css
+   # express the regexp above with the code you wish you had
+  
+
 end
 
 

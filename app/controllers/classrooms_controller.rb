@@ -73,6 +73,21 @@ class ClassroomsController < ApplicationController
     end
   end
 
+  def available
+    sort = params[:sort] || session[:sort]
+    case sort
+    when 'name'
+      ordering = :name
+    when 'occupancy'
+      ordering = 'max_occupancy DESC'
+    end
+    
+    if params[:sort] != session[:sort]
+      session[:sort] = sort
+    end
+    @available_classrooms = Classroom.all.order(ordering)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_classroom
