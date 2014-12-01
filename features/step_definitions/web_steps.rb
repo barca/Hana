@@ -72,13 +72,10 @@ Then(/^I should not witness seven days from today$/) do
    page.should have_no_content('#{Date.today.day} + 7')
 end
 
-Then(/^"(.*?)" in "(.*?)" should be "(.*?)"$/) do |arg1, arg2, arg3|
-  pending
-  #page.find('#'+arg2).find("a",:text=>arg1).native.css
-   # express the regexp above with the code you wish you had
-  
-
+Then(/^the color of "(.*?)" in "(.*?)" should be "(.*?)"$/) do |lesson, calendar, color|
+pending
 end
+
 
 
 When(/^I set "(.*?)" to "(.*?)"$/) do |arg1, arg2|
@@ -86,7 +83,7 @@ When(/^I set "(.*?)" to "(.*?)"$/) do |arg1, arg2|
 end
 
 Then(/^I should not see "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  page.should have_no_content(arg1)
 end
 
 

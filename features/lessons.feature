@@ -15,14 +15,14 @@ Feature: Add/Edit Lessons
       Given the following classrooms exist:
 
      |name         | max_occupancy | details | color|
-     |Gym          | 14            |         | red  |
+     |Gym          | 14            |         | Red  |
      |Dance Studio | 20            |         | blue |
      |Computer Lab | 40            |         | green|
 
      And the following lessons exist:
  | title        | instructor| g1_3 | g3_5 | g6_8  | starts_at           | ends_at            | location        | max_enrollment         | description | mon  | end_date   | color | start_date| 
- | Star Wars 101| Han Solo  | false| true | true  | 2013-10-10 2:00:00  | 2013-10-10 3:00:00 |Gym              | 7                      | A           | true | 2013-10-10 | red| 2013-10-10|
- | Star Wars 102| luke      | true | false| true  | 2013-10-11 3:00:00  | 2013-10-11 4:00:00 | Gym             | 7                      | B           | true | 2014-12-30 | red|2013-10-11|
+ | Star Wars 101| Han Solo  | false| true | true  | 2013-10-10 2:00:00  | 2013-10-10 3:00:00 |Gym              | 7                      | A           | true | 2013-10-10 | Red| 2013-10-10|
+ | Star Wars 102| luke      | true | false| true  | 2013-10-11 3:00:00  | 2013-10-11 4:00:00 | Gym             | 7                      | B           | true | 2014-12-30 | Red|2013-10-11|
  | Death star   | Darth     | true |false | false |  2013-10-12 4:00:00 | 2013-10-12 5:00:00 | Dance Studio    | 7                      | C           | true | 2014-12-30 | blue |2013-10-12|
  | Dancing      | Usher     | true | false| false | 2013-10-13 5:00:00  |  2013-10-13 6:00:00| Dance Studio    | 7                      | D           | true | 2014-12-30 | blue|2013-10-13|
 
@@ -70,7 +70,7 @@ Feature: Add/Edit Lessons
 
   Scenario: ITERATION 3- Color coded lesson in calendar view
     When I go to the home page
-    Then "Star Wars 102" in "calendar13" should be "red"
+    Then the color of "Star Wars 102" in "calendar13" should be "Red"
 
   Scenario: ITERATION 3- See available classrooms during Lesson Creation
     When I go to the edit lessons page for "Dancing"
@@ -83,25 +83,26 @@ Feature: Add/Edit Lessons
     And I select "00" from "lesson_ends_at_5i"    
     And I click "See Available Classrooms"
     Then I should see "Computer Lab"
-    But I should not see "Dance Studio"
+    But I should not see "Dance Studio" at all 
 
   Scenario: ITERATION 3- See Unused classrooms in Calendar view
     When I go to the home page
     Then on "2013-10-10" I should see "Computer Lab"
     But I should not see "Gym"
 
-  Scenario: ITERATION 3- Gracefully fail when I try and make an event span multiple days
-    When I go to the edit lessons page for "Dancing"
+  Scenario: ITERATION 3- Gracefully fail when I try to make the end time earlier than start time 
+    When I go to New Lessons
     And I select "2013" from "lesson_start_date_1i"
     And I select "October" from "lesson_start_date_2i"
     And I select "12" from "lesson_start_date_3i"
     And I select "04 AM" from "lesson_starts_at_4i"
     And I select "00" from "lesson_starts_at_5i"
-    And I select "05 PM" from "lesson_ends_at_4i"
+    And I select "01 AM" from "lesson_ends_at_4i"
     And I select "00" from "lesson_ends_at_5i"
-    And I click "Create Lesson"
-    Then I should see "Events cannot span multiple days"
-    But I should not see "Lesson was successfully"
+    And I select "Red" from "Color"
+    And I press "Create Lesson"
+    Then I should see "Ends at can't be before Starts at"
+    But I should not see "Lesson was successfully created"
 
 
 
