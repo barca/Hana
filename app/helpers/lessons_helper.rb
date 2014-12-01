@@ -18,10 +18,9 @@ module LessonsHelper
 			#SQL to return lessons for the appropriate grade level that occur on a given day
 			return classes.find_by_sql("SELECT * FROM \"lessons\"  
 												WHERE (\"lessons\".\"#{grade_level}\" = \'t\' 
-													AND (\"lessons\".\"starts_at\" < \'#{dayTomorrow}\') 
-													AND (\"lessons\".\"end_date\" > \'#{dayYesterday}\') 
-													AND ((\"lessons\".\"starts_at\" BETWEEN \'#{dayStart}\' AND \'#{dayEnd}\') 
-														OR (\"lessons\".\"#{dayOfWeek}\" = \'t\'))) 
+													AND (\"lessons\".\"start_date\" < \'#{dayTomorrow}\') 
+													AND (\"lessons\".\"start_date\" > \'#{dayYesterday}\') 
+														OR (\"lessons\".\"#{dayOfWeek}\" = \'t\'))
 												ORDER BY TIME(\"lessons\".\"starts_at\")")
 		end
 	end
