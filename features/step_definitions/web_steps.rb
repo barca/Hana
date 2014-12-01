@@ -46,29 +46,29 @@ When /^(?:|I )press "(.*)"$/ do |button|
 end
 
 When /^(?:|I )click "(.*)"$/ do |link|
-   click_link(link) 
-end 
+   click_link(link)
+end
 
 When /^(?:|I )check "(.*)"$/ do |button|
   check(button)
 end
 
- 
+
 Then /^I should locate "(.*?)" in "(.*?)"$/ do |arg1, arg2|
   @id=arg1.should have_content(arg1)
-end 
+end
 
 Then /^I should not locate "(.*?)" in "(.*?)"$/ do |arg1, arg2|
   @id=arg1.should !(have_content(arg1))
-end 
+end
 
 
 
-Then(/^I should witness today$/) do 
+Then(/^I should witness today$/) do
    page.has_content?('#{Date.today.day}')
 end
 
-Then(/^I should not witness seven days from today$/) do 
+Then(/^I should not witness seven days from today$/) do
    page.should have_no_content('#{Date.today.day} + 7')
 end
 
@@ -76,13 +76,8 @@ Then(/^"(.*?)" in "(.*?)" should be "(.*?)"$/) do |arg1, arg2, arg3|
   pending
   #page.find('#'+arg2).find("a",:text=>arg1).native.css
    # express the regexp above with the code you wish you had
-  
-
-end
 
 
-When(/^I set "(.*?)" to "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
 end
 
 Then(/^I should not see "(.*?)"$/) do |arg1|

@@ -45,6 +45,8 @@ Feature: Add/Edit Lessons
     And I check "lesson_g1_3"
     And I select "Gym" from "Location"
     And I fill in "Max enrollment" with "14"
+    And I set lesson start at to "2013-December-14" "08 AM:00"
+    And I set lesson end time to "9 AM:00"
     And I press "Create Lesson"
     Then I should be on the show page for "Why Alex Drexler is Great"
 
@@ -55,6 +57,8 @@ Feature: Add/Edit Lessons
     And I check "lesson_g3_5"
     And I select "Dance Studio" from "Location"
     And I fill in "Max enrollment" with "14"
+    And I set lesson start at to "2013-December-10" "08 AM:00"
+    And I set lesson end time to "9 AM:00"
     And I check "lesson_wed"
     And I check "lesson_fri"
     And I press "Create Lesson"
@@ -88,8 +92,9 @@ Feature: Add/Edit Lessons
 
   Scenario: ITERATION 3- See available classrooms during Lesson Creation
     When I go to the edit lessons page for "Dancing"
-    And I set "Starts at" to "2013-10-12 4:00:00"
-    And I set "Ends at" to "2013-10-12 5:00:00"
+    And I set lesson start at to "2014-December-1" "3 PM:00"
+    And I set lesson end time to "5 PM:00"
+
     And I click "See available classrooms"
     Then I should see "Computer Lab"
     But I should not see "Dance Studio"
@@ -101,8 +106,8 @@ Feature: Add/Edit Lessons
 
   Scenario: ITERATION 3- Gracefully fail when I try and make an event span multiple days
     When I go to the edit lessons page for "Dancing"
-    And I set "Starts at" to "2013-10-12 4:00:00"
-    And I set "Ends at" to"2013-10-13 5:00:00"
+    And I set lesson start at to "2013-September-10" "06 PM:00"
+    And I set lesson end time to "7 PM:00"
     And I press "Create Lesson"
     Then I should see "Events cannot span multiple days"
     But I should not see "Lesson was successfully"
