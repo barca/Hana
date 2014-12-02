@@ -119,7 +119,10 @@ class ClassroomsController < ApplicationController
       @classroom = Classroom.find(params[:id])
     end
 
-    def classNotOccupied(classroom, date, start, finish)
+    def classNotOccupiedAtTime(classroom, date, start, finish)
+    end
+
+    def classNotOccupiedOnDay(classroom, date, start, finish)
       days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
       dayOfWeek = days_of_week[(date.wday)]
       #currently only returns classes available on a specific day
@@ -128,9 +131,9 @@ class ClassroomsController < ApplicationController
                                 OR \"lessons\".\"#{dayOfWeek}\" = \'t\')
                             AND \"lessons\".\"location\" == \'#{classroom.name}\'")
       if @lessons == []
-        return false
-      else
         return true
+      else
+        return false
       end      
     end
 
