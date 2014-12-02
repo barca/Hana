@@ -107,7 +107,7 @@ class ClassroomsController < ApplicationController
     @classrooms = Classroom.all
     @available_classrooms = []
     @classrooms.each do |classroom|
-      if classNotOccupied(classroom, @date, @start_time, @end_time)
+      if classNotOccupiedOnDay(classroom, @date)
         @available_classrooms << classroom
       end
     end
@@ -122,7 +122,7 @@ class ClassroomsController < ApplicationController
     def classNotOccupiedAtTime(classroom, date, start, finish)
     end
 
-    def classNotOccupiedOnDay(classroom, date, start, finish)
+    def classNotOccupiedOnDay(classroom, date)
       days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
       dayOfWeek = days_of_week[(date.wday)]
       #currently only returns classes available on a specific day
