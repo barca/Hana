@@ -85,7 +85,32 @@ class ClassroomsController < ApplicationController
     if params[:sort] != session[:sort]
       session[:sort] = sort
     end
-    @available_classrooms = Classroom.all.order(ordering)
+
+    if params[:day] != nil
+      @date = Date.new(params[:day]['get(1i)'].to_i,params[:day]['get(2i)'].to_i,params[:day]['get(3i)'].to_i)
+    else
+      @date = Date.today
+    end
+
+    if params[:starts_at] != nil
+      @start_time = Time.parse "2000-01-01 #{params[:starts_at]['get(4i)']}:#{params[:starts_at]['get(5i)']}"
+    else
+      @start_time = Time.now
+    end
+
+    if params[:ends_at] != nil
+      @end_time = Time.parse "2000-01-01 #{params[:ends_at]['get(4i)']}:#{params[:ends_at]['get(5i)']}"
+    else
+      @end_time = Time.now
+    end
+
+    @classrooms = Classroom.all
+    @available_classrooms = []
+    @classrooms.each do |classroom|
+      if classNotOccupied(classroom, @date, @start_time, @end_time)
+        @available_classrooms << classroom
+      end
+    end
   end
 
   private
@@ -94,8 +119,66 @@ class ClassroomsController < ApplicationController
       @classroom = Classroom.find(params[:id])
     end
 
+    def classNotOccupied(classroom, date, start, finish)
+      days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
+      dayOfWeek = days_of_week[(date.wday)]
+      #currently only returns classes available on a specific day
+      @lessons=Lesson.find_by_sql("SELECT * FROM \"lessons\"  
+                        WHERE  (\"lessons\".\"start_date\" = \'#{date}\'
+                                OR \"lessons\".\"#{dayOfWeek}\" = \'t\')
+                            AND \"lessons\".\"location\" == \'#{classroom.name}\'")
+      if @lessons == []
+        return false
+      else
+        return true
+      end      
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def classroom_params
       params.require(:classroom).permit(:name, :max_occupancy, :details, :color)
     end
 end
+
+
+
+### VVVV DON'T LOOK AT ANYTING DOWN THERE!!!! VVVV ###
+
+
+ #   "SELECT * FROM \"lessons\"  
+  #                      WHERE ((((\"lessons\".\"starts_at\") < (\'#{start}\')) 
+   #                           AND ((\"lessons\".\"ends_at\") > (\'#{start}\')))
+    #                        OR (((\"lessons\".\"starts_at\") < (\'#{finish}\')) 
+     #                         AND ((\"lessons\".\"ends_at\") > (\'#{finish}\'))))
+
+#Lesson.find_by_sql("SELECT \"lessons\".* FROM \"lessons\"  
+#                        WHERE (((TIME(\"lessons\".\"starts_at\") < TIME(\'#{start}\')) 
+#                              AND (TIME(\"lessons\".\"ends_at\") > TIME(\'#{start}\')))
+#                            OR ((TIME(\"lessons\".\"starts_at\") < TIME(\'#{finish}\')) 
+#                              AND (TIME(\"lessons\".\"ends_at\") > TIME(\'#{finish}\'))))
+#                          AND (\"lessons\".\"start_date\" == #{date}
+#                            OR \"lessons\".\"#{dayOfWeek}\" = \'t\')
+#                          AND \"lessons\".\"location\" = \'#{classroom.name}\'")
+
+#Lesson.find_by_sql("SELECT * FROM \"lessons\" WHERE (\"lessons\".\"start_date\" = #{Date.today}
+#                            OR \"lessons\".\"tue\" = \'t\')
+#                          AND \"lessons\".\"location\" = \'Test A \'")
+
+
+
+#Lesson.find_by_sql("SELECT \"lessons\".* FROM \"lessons\" WHERE TIME(\"lessons\".\"starts_at\") < TIME(\'#{Time.now}\')")
+
+
+#working
+#Lesson.find_by_sql("SELECT \"lessons\".* FROM \"lessons\"  WHERE (\"lessons\".\"start_date\" = \'2014-12-02\' OR \"lessons\".\"tue\" = \'t\') AND \"lessons\".\"location\" = \'This is a Class\'")
+
+
+
+#Lesson.find_by_sql("SELECT * FROM \"lessons\"  
+#                        WHERE (((\"lessons\".\"starts_at\" < \'04:00\') 
+#                              AND (\"lessons\".\"ends_at\" > \'04:30\'))
+#                            OR ((\"lessons\".\"starts_at\" > \'04:00\') 
+#                              AND (\"lessons\".\"ends_at\" < \'04:30\')))
+#                          AND (\"lessons\".\"start_date\" == #{Date.today}
+#                            OR \"lessons\".\"tue\" = \'t\')
+#                          AND \"lessons\".\"location\" == \'Test A\'")
