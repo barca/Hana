@@ -18,7 +18,7 @@ class ClassroomsControllerTest < ActionController::TestCase
 
   test "should create classroom" do
     assert_difference('Classroom.count') do
-      post :create, classroom: { details: @classroom.details, max_occupancy: @classroom.max_occupancy, name: @classroom.name }
+      post :create, classroom: { color: @classroom.color, created_at: @classroom.created_at, details: @classroom.details, max_occupancy: @classroom.max_occupancy, name: @classroom.name, updated_at: @classroom.updated_at }
     end
 
     assert_redirected_to classroom_path(assigns(:classroom))
@@ -35,7 +35,7 @@ class ClassroomsControllerTest < ActionController::TestCase
   end
 
   test "should update classroom" do
-    patch :update, id: @classroom, classroom: { details: @classroom.details, max_occupancy: @classroom.max_occupancy, name: @classroom.name }
+    patch :update, id: @classroom, classroom: { color: @classroom.color, created_at: @classroom.created_at, details: @classroom.details, max_occupancy: @classroom.max_occupancy, name: @classroom.name, updated_at: @classroom.updated_at }
     assert_redirected_to classroom_path(assigns(:classroom))
   end
 

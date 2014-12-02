@@ -18,6 +18,7 @@ Feature: Add/Edit Lessons
      |Gym          | 14            |         | Red  |
      |Dance Studio | 20            |         | blue |
      |Computer Lab | 40            |         | green|
+     |Unused Room  | 50            |         | olive| 
 
      And the following lessons exist:
  | title        | instructor| g1_3 | g3_5 | g6_8  | starts_at           | ends_at            | location        | max_enrollment         | description | mon  | end_date   | color | start_date|
@@ -93,11 +94,6 @@ Feature: Add/Edit Lessons
     When I go to the home page
     Then the color of "Star Wars102" in "calendar13" should be "Red"
 
-  Scenario: ITERATION 3- See Unused classrooms in Calendar view
-    When I go to the home page
-    Then on "2013-10-10" I should see "Computer Lab"
-    But I should not see "Gym"
-
   Scenario: ITERATION 3- Gracefully fail when I try to end before it begins
     When I go to the edit lessons page for "Dancing"
     And I set lesson start at to "2013-September-10" "06 PM:00"
@@ -132,8 +128,8 @@ Feature: Add/Edit Lessons
     And I set lesson start at to "2014-December-1" "3 PM:00"
     And I set lesson end time to "5 PM:00"
     And I click "See Available Classrooms"
-    Then I should see "Computer Lab"
-    But I should not see "Dance Studio"
+    Then I should see "Unused Room"
+    But I should not see "Gym"
 
 
 
