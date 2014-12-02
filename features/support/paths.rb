@@ -20,6 +20,9 @@ module NavigationHelpers
     when /^the show page for "(.*)"$/ then lesson_path(Lesson.find_by_title($1))
 
     when /^the home page/ then '/'
+
+    when /^the classrooms page/ then "/classrooms"
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

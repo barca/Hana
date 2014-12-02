@@ -77,7 +77,7 @@ end
 
 
 Then(/^I should not see "(.*?)"$/) do |arg1|
-  page.should have_no_content(arg1)
+  page.should !(have_content(arg1))
 end
 
 Then(/^the color of "(.*?)" in "(.*?)" should be "(.*?)"$/) do |lesson, calendar, color|
@@ -86,4 +86,21 @@ Then(/^the color of "(.*?)" in "(.*?)" should be "(.*?)"$/) do |lesson, calendar
     page.should have_css("div.lessonBlock")
   end
 end
+
+Then(/^I should see a reordering of "(.*?)" before "(.*?)"$/) do |class1, class2| 
+  RSpec::Matchers.define :appear_before do |class2|
+  match do |class1|
+    page.body.index(class1) < page.body.index(class2)
+  end
+  end
+end 
+
+When(/^I click the first "(.*?)"$/) do |word|
+  page.first(:link, "#{word}").click  
+end
+
+When(/^I click the OK$/) do
+  page.driver.browser.switch_to.alert.accept
+end 
+
 

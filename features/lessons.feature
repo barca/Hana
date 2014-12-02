@@ -117,6 +117,16 @@ Feature: Add/Edit Lessons
     And I click "Back"
     Then I should see "Multi Purpose Room"
 
+  Scenario: ITERATION 3- Reorder clasrooms by occupancy and then alphabetically
+    When I go to the classrooms page 
+    And I click "Name"
+    Then I should see a reordering of "Computer Lab" before "Gym"
+    When I click "Max occupancy"
+    Then I should see a reordering of "Gym" before "Computer Lab"
+    When I click the first "Delete"
+    Then I should not see "Gym"
+    And I should see "Classroom was successfully destroyed"
+  
   Scenario: ITERATION 3- See available classrooms during Lesson Creation
     When I go to the edit lessons page for "Dancing"
     And I set lesson start at to "2014-December-1" "3 PM:00"
@@ -124,8 +134,6 @@ Feature: Add/Edit Lessons
     And I click "See Available Classrooms"
     Then I should see "Computer Lab"
     But I should not see "Dance Studio"
-
-  
 
 
 
