@@ -54,11 +54,15 @@ When /^(?:|I )check "(.*)"$/ do |button|
 end
 
 Then /^I should locate "(.*?)" in "(.*?)"$/ do |lesson, calendar|
-  page.assert_selector(:css,'#'+calendar,:text=>lesson,:minimum=>1)
+  within('div#' + calendar + ".weekCalendar") do 
+    page.should have_content(lesson)
+  end
 end 
 
-Then /^I should not locate "(.*?)" in "(.*?)"$/ do |arg1, arg2|
-  page.find('#'+arg2).should !(have_content(arg1))
+Then /^I should not locate "(.*?)" in "(.*?)"$/ do |lesson,calendar|
+  within('div#' + calendar + ".weekCalendar") do 
+    page.should !(have_content(lesson))
+  end
 end 
 
 
@@ -76,9 +80,10 @@ Then(/^I should not see "(.*?)"$/) do |arg1|
   page.should have_no_content(arg1)
 end
 
-Then(/^the color of "(.*?)" in "(.*?)" should be "(.*?)"$/) do |arg1, arg2, arg3|
-page = Nokogiri::HTML.parse(page.source)
-page.css('style').first.textend
-
+Then(/^the color of "(.*?)" in "(.*?)" should be "(.*?)"$/) do |lesson, calendar, color|
+  within('div#' + calendar + ".weekCalendar") do 
+    page.should (have_content(lesson))
+    page.should have_css("div.lessonBlock")
+  end
 end
 
