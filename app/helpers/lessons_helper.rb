@@ -26,4 +26,13 @@ module LessonsHelper
 												ORDER BY TIME(\"lessons\".\"starts_at\")")
 		end
 	end
+
+	def getLessonColor(lesson)
+		lessons_classroom = Classroom.where(name: lesson.location)
+		if lessons_classroom.empty?
+			"black"
+		else
+			lessons_classroom[0].color 
+		end
+	end
 end 
