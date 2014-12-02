@@ -15,8 +15,8 @@
           </div>
           <% lessonsOn(date, @lessons13, "g1_3").each do |lesson| %>
             <div class='lessonBlock'>
-              <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %></strong><br>
-              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M%P") %><br>
+              <strong><%= link_to lesson.title, lesson, style: "color: #{Classroom.where(name: lesson.location)[0].color}" %></strong><br>
+              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
               <%= lesson.location %>
             </div>
           <% end %>
@@ -37,8 +37,8 @@
         </div>
         <% lessonsOn(date, @lessons35, "g3_5").each do |lesson| %>
           <div class='lessonBlock'>
-            <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %></strong><br>
-              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M%P") %><br>
+              <strong><%= link_to lesson.title, lesson, style: "color: #{Classroom.where(name: lesson.location)[0].color}" %></strong><br>
+              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
             <%= lesson.location %>
           </div>
         <% end %>
@@ -60,8 +60,8 @@
 
           <% lessonsOn(date, @lessons68, "g6_8").each do |lesson| %>
             <div class='lessonBlock'>
-              <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %></strong><br>
-              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M%P") %><br>
+              <strong><%= link_to lesson.title, lesson, style: "color: #{Classroom.where(name: lesson.location)[0].color}" %></strong><br>
+              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
               <%= lesson.location %>
             </div>
           <% end %>
