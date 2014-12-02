@@ -4,10 +4,11 @@ class Lesson < ActiveRecord::Base
 
 	#form validation
 	validates :title, :instructor, :location, presence: true
+	validate :some_grade_level_selected
 	validate :ends_at_after_starts_at
 	validate :enrollment_not_negative
-	validate :some_grade_level_selected
   	validate :lesson_max_more_than_classroom_capacity
+  	validate :end_date_after_start_date
 
 
 
@@ -19,9 +20,17 @@ class Lesson < ActiveRecord::Base
 	  end
 	end
 
+	def end_date_after_start_date
+		if mon==true || tue==true || wed==true || thu==true || fri==true
+			if end_date < start_date
+				errors.add(:until, "can't be before start date for repeating lessons")
+			end
+		end
+	end
+
 	def ends_at_after_starts_at
 		if ends_at.to_i < starts_at.to_i
-			errors.add(:ends_at, "can't be before Starts at")
+			errors.add(:ends_at, "can't be before starts time")
 		end
 	end
 

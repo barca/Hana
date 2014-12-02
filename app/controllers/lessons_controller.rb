@@ -46,8 +46,7 @@ class LessonsController < ApplicationController
     #If we're passed a date, store it
     if params[:date] != nil
       #sending date through params turns it into a string, convert back
-      @selected_start = Date.parse params[:date]
-      @selected_end = Date.parse params[:date]
+      @selected_date = Date.parse params[:date]
     end
 
   end
@@ -65,8 +64,6 @@ class LessonsController < ApplicationController
     end
     @classroomSelect = @roomsList
     @classroomsColorSelect = @colorsList
-    @selected_start = @lesson.start_date
-    @selected_end = @lesson.end_date
   end
 
   # POST /lessons

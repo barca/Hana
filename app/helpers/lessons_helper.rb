@@ -1,4 +1,5 @@
 module LessonsHelper
+
 	#find lessons occuring on a given day
 	def lessonsOn(date, classes, grade_level)
 		dayTomorrow = (date + 1)
