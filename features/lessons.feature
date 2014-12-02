@@ -108,7 +108,7 @@ Feature: Add/Edit Lessons
     And I set lesson start at to "2013-September-10" "06 PM:00"
     And I set lesson end time to "3 PM:00"
     And I press "Update Lesson"
-    Then I should see "Ends at can't be before Starts at"
+    Then I should see "Ends at can't be before starts time"
     But I should not see "Lesson was successfully created"
 
 

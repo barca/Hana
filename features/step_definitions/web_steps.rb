@@ -76,4 +76,9 @@ Then(/^I should not see "(.*?)"$/) do |arg1|
   page.should have_no_content(arg1)
 end
 
+Then(/^the color of "(.*?)" in "(.*?)" should be "(.*?)"$/) do |arg1, arg2, arg3|
+page = Nokogiri::HTML.parse(page.source)
+page.css('style').first.textend
+
+end
 
