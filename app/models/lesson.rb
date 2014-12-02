@@ -7,15 +7,9 @@ class Lesson < ActiveRecord::Base
 	validate :ends_at_after_starts_at
 	validate :enrollment_not_negative
 	validate :some_grade_level_selected
-	validate :end_date_after_start_date
   	validate :lesson_max_more_than_classroom_capacity
-	validate :lesson_spans_many_days
 
-  
-    def lesson_spans_many_days
-      true 
-    end
-        
+
 
 	def lesson_max_more_than_classroom_capacity
 	  classroom = Classroom.find_by(name: location)
@@ -43,9 +37,4 @@ class Lesson < ActiveRecord::Base
 		end
 	end
 
-	def end_date_after_start_date
-		if mon || tue || wed || thu || fri
-			true
-		end
-	end
 end

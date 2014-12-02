@@ -38,7 +38,7 @@
         <% lessonsOn(date, @lessons35, "g3_5").each do |lesson| %>
           <div class='lessonBlock'>
             <strong><%= link_to lesson.title, lesson, style: "color: #{lesson.color}" %></strong><br>
-            <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
+              <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
             <%= lesson.location %>
           </div>
         <% end %>

@@ -39,7 +39,7 @@
     <%= f.label :starts_at %>
     </div>
     &nbsp Date
-    <%= f.date_select :start_date, selected: @selected_date %><br>
+    <%= f.date_select :start_date, selected: @selected_start %><br>
     &nbsp Time
     <%= f.time_select :starts_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
@@ -65,13 +65,13 @@
     Friday
     <%= f.check_box :fri %>
     <br> &nbsp <%=f.label :until %>
-    <%= f.date_select :end_date, selected: @selected_date %>
+    <%= f.date_select :end_date, selected: @selected_end %>
   </div>
   <div class="field">
     <div>
     <%= f.label :location %>
     </div>
-    <%= f.select :location, @classroomSelect %>
+    <%= f.select :location, @classroomSelect %> <%= link_to "See Available Classrooms", classroom_available_path %>
   </div>
   <div class="field">
     <div>
