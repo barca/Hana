@@ -39,7 +39,9 @@
     <%= f.label :starts_at %>
     </div>
     &nbsp Date
-    <%= f.date_select :start_date, selected: @selected_date %><br>
+    <%= f.date_select :start_date, selected: @selected_date if params[:date]!=nil %>
+    <%= f.date_select :start_date if params[:date]==nil %>
+    <br>
     &nbsp Time
     <%= f.time_select :starts_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
@@ -65,7 +67,8 @@
     Friday
     <%= f.check_box :fri %>
     <br> &nbsp <%=f.label :until %>
-    <%= f.date_select :end_date, selected: @selected_date %>
+    <%= f.date_select :end_date, selected: @selected_date if params[:date]!=nil %>
+    <%= f.date_select :end_date if params[:date]==nil %>
   </div>
   <div class="field">
     <div>

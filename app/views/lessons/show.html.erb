@@ -19,21 +19,21 @@
 
 <p>
   <strong>Starts at:</strong>
-  <%= @lesson.starts_at %>
+  <%= @lesson.starts_at.strftime("%I:%M %p") %>
 </p>
 
 <p>
   <strong>Ends at:</strong>
-  <%= @lesson.ends_at %>
+  <%= @lesson.ends_at.strftime("%I:%M %p") %>
 </p>
 
 <p>
   <strong><%= "From:" if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %></strong>
   <strong><%= "Date:" if @lesson.mon == false && @lesson.tue == false && @lesson.wed == false && @lesson.thu == false && @lesson.fri == false %></strong>
-  <%= @lesson.starts_at%>
+  <%= @lesson.start_date %>
 
   <strong><%= "to" if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %> </strong>
-  <%= @lesson.start_date if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %>
+  <%= @lesson.end_date if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %>
 </p>
 <p>
 </p>
