@@ -105,12 +105,7 @@ class ClassroomsController < ApplicationController
     end
 
     @classrooms = Classroom.all
-    @available_classrooms = []
-    @classrooms.each do |classroom|
-      if classNotOccupiedOnDay(classroom, @date)
-        @available_classrooms << classroom
-      end
-    end
+    @available_classrooms = dailyAvailableClassrooms(@date)
   end
 
   private
@@ -119,7 +114,20 @@ class ClassroomsController < ApplicationController
       @classroom = Classroom.find(params[:id])
     end
 
+    def dailyAvailableClassrooms(date)
+      availables = []
+      allRooms = Classroom.all
+      allRooms.each do |classroom|
+        if classNotOccupiedOnDay(classroom, date)
+          availables << classroom
+        end
+      end
+      return availables
+    end
+
+
     def classNotOccupiedAtTime(classroom, date, start, finish)
+      #build of off classNotOccupiedOnDay
     end
 
     def classNotOccupiedOnDay(classroom, date)

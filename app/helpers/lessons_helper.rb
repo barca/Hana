@@ -27,6 +27,37 @@ module LessonsHelper
 		end
 	end
 
+    def dailyAvailableClassrooms(date)
+
+      days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
+      dayOfWeek = days_of_week[(date.wday)]
+      availables = []
+      if dayOfWeek != "sun" && dayOfWeek != "sat"
+	      allRooms = Classroom.all.order(:name)
+	      allRooms.each do |classroom|
+	        if classNotOccupiedOnDay(classroom, date)
+	          availables << classroom
+	        end
+	      end
+	  end
+	  return availables
+    end
+
+    def classNotOccupiedOnDay(classroom, date)
+      days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
+      dayOfWeek = days_of_week[(date.wday)]
+      #currently only returns classes available on a specific day
+      @lessons=Lesson.find_by_sql("SELECT * FROM \"lessons\"  
+                        WHERE  (\"lessons\".\"start_date\" = \'#{date}\'
+                                OR \"lessons\".\"#{dayOfWeek}\" = \'t\')
+                            AND \"lessons\".\"location\" == \'#{classroom.name}\'")
+      if @lessons == []
+        return true
+      else
+        return false
+      end      
+    end
+
 	def getLessonColor(lesson)
 		lessons_classroom = Classroom.where(name: lesson.location)
 		if lessons_classroom.empty?
@@ -35,4 +66,5 @@ module LessonsHelper
 			lessons_classroom[0].color 
 		end
 	end
+
 end 

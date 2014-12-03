@@ -48,7 +48,7 @@ class LessonsController < ApplicationController
       #sending date through params turns it into a string, convert back
       @selected_date = Date.parse params[:date]
     end
-
+    @selected_room = params[:room].to_s
   end
 
   # GET /lessons/1/edit

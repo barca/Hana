@@ -4,40 +4,45 @@
 
 
 .day {
-	background-color: white;
+	width: 150px;
+	vertical-align: top;
+	height: 175px;
 	border-style: solid;
 	border-color: black;
 	border-width: 2px;
-	width: 150px;
-	vertical-align: top;
 }
+
+.calendarDate {
+	color: #325932;
+	text-align: left;
+	a {
+  		color: #325932;
+  		&:visited {
+    		color: #325932;
+    	}
+  	}
+}
+
 .weekCalendar {
-	.day {
-		height: 175px;
-	}
-	.calendarDate {
-		color: #325932;
-		text-align: left;
-	}
 	.lessonBlock {
 		background-image: url("lessonBlockBackground.png"); 
 		border: 2px solid black;
 		margin-bottom: 1px;
 	}
-	.classroomA {
-		background: red;
+	.today {
+		background-color: rgb(184, 247, 199);
 	}
 }
-.monthCalendar {
-	.day {
-		height: 100px;
-	}
+
+.weekCalendarClassrooms {
+	text-align: left;
 }
+
 .prev-month, .next-month, .wday-0, .wday-6 {
 	background-color: gainsboro;
 }
 
-.today {
-	background-color: rgb(184, 247, 199);
-}
+
+
+
 

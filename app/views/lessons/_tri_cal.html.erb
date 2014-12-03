@@ -70,5 +70,26 @@
     </th>
   </tr>
 
+  <tr id=''>
+    <th class='grades'>
+      <strong>Available<br>Classrooms</strong>
+    </th>
+    <th>
+      <div class= "weekCalendarClassrooms" id='classrooms'>
+        <%= week_calendar title: '', previous_link: '', next_link: '' do |date| %>
+          <div class= 'calendarDate'>
+            <strong><%= date.day %></strong>
+          </div>
+
+          <% dailyAvailableClassrooms(date).each do |classroom| %>
+            <div class='classroom'>
+              <%= link_to classroom.name, new_lesson_path(date: date, room: classroom.name), style: "color: #{classroom.color}" %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </th>
+  </tr>
+
 </table>
 
