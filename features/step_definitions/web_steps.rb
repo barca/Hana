@@ -59,12 +59,12 @@ Then /^I should locate "(.*?)" in "(.*?)"$/ do |lesson, calendar|
   end
 end 
 
+
 Then /^I should not locate "(.*?)" in "(.*?)"$/ do |lesson,calendar|
   within('div#' + calendar + ".weekCalendar") do 
     page.should !(have_content(lesson))
   end
 end 
-
 
 
 Then(/^I should witness today$/) do

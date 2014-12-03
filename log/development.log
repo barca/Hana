@@ -171,6 +171,20 @@ Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-01 18:04:38 
 Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 18:04:38 -0500
 
 
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2014-12-01 23:08:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LessonsController#index as HTML
+Redirected to http://localhost:3000/lessons?start_date=2014-11-30
+Completed 302 Found in 42ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/lessons?start_date=2014-11-30" for 127.0.0.1 at 2014-12-01 23:08:40 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-11-30"}
+  [1m[35mLesson Load (0.6ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g1_3" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+=======
 Started GET "/" for 127.0.0.1 at 2014-12-02 10:52:22 -0500
   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by LessonsController#index as HTML
@@ -5090,28 +5104,44 @@ Processing by LessonsController#index as HTML
   Parameters: {"start_date"=>"2014-12-02"}
   [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."g1_3" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC[0m
   [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g1_3" = 't' 
 														AND ("lessons"."start_date" < '2014-12-02') 
 														AND ("lessons"."end_date" > '2014-11-30'))
 													AND ("lessons"."start_date" == 2014-12-01
 														OR "lessons"."mon" = 't')
+<<<<<<< HEAD
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mClassroom Load (0.5ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+=======
 												ORDER BY TIME("lessons"."starts_at")
   [1m[36mClassroom Load (0.1ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '[0m
   [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g1_3" = 't' 
 														AND ("lessons"."start_date" < '2014-12-03') 
 														AND ("lessons"."end_date" > '2014-12-01'))
 													AND ("lessons"."start_date" == 2014-12-02
 														OR "lessons"."tue" = 't')
+<<<<<<< HEAD
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+=======
 												ORDER BY TIME("lessons"."starts_at")
   [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g1_3" = 't' 
 														AND ("lessons"."start_date" < '2014-12-04') 
 														AND ("lessons"."end_date" > '2014-12-02'))
 													AND ("lessons"."start_date" == 2014-12-03
 														OR "lessons"."wed" = 't')
+<<<<<<< HEAD
+												ORDER BY TIME("lessons"."starts_at")
+=======
 												ORDER BY TIME("lessons"."starts_at")[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '[0m
   [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
 												WHERE ("lessons"."g1_3" = 't' 
@@ -5129,14 +5159,24 @@ Processing by LessonsController#index as HTML
 												ORDER BY TIME("lessons"."starts_at")[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
   [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."g1_3" = 't' AND ("lessons"."start_date" < '2014-12-07') AND ("lessons"."end_date" > '2014-12-05') AND ("lessons"."start_date" BETWEEN '2014-12-06 05:00:00.000000' AND '2014-12-07 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC[0m
+<<<<<<< HEAD
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g3_5" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+=======
   [1m[35mLesson Load (0.3ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g3_5" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
   [1m[36mLesson Load (0.3ms)[0m  [1mSELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g3_5" = 't' 
 														AND ("lessons"."start_date" < '2014-12-02') 
 														AND ("lessons"."end_date" > '2014-11-30'))
 													AND ("lessons"."start_date" == 2014-12-01
 														OR "lessons"."mon" = 't')
 												ORDER BY TIME("lessons"."starts_at")[0m
+<<<<<<< HEAD
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE ("lessons"."g3_5" = 't' 
+=======
   [1m[35mCACHE (0.1ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
   [1m[36mLesson Load (0.3ms)[0m  [1mSELECT * FROM "lessons"  
 												WHERE ("lessons"."g3_5" = 't' 
@@ -5181,10 +5221,16 @@ Processing by LessonsController#index as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '[0m
   [1m[35mLesson Load (0.3ms)[0m  SELECT * FROM "lessons"  
 												WHERE ("lessons"."g6_8" = 't' 
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 														AND ("lessons"."start_date" < '2014-12-03') 
 														AND ("lessons"."end_date" > '2014-12-01'))
 													AND ("lessons"."start_date" == 2014-12-02
 														OR "lessons"."tue" = 't')
+<<<<<<< HEAD
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mLesson Load (0.3ms)[0m  SELECT * FROM "lessons"  
+												WHERE ("lessons"."g3_5" = 't' 
+=======
 												ORDER BY TIME("lessons"."starts_at")
   [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
 												WHERE ("lessons"."g6_8" = 't' 
@@ -5265,12 +5311,15 @@ Processing by LessonsController#index as HTML
 												ORDER BY TIME("lessons"."starts_at")[0m
   [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
 												WHERE ("lessons"."g1_3" = 't' 
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 														AND ("lessons"."start_date" < '2014-12-04') 
 														AND ("lessons"."end_date" > '2014-12-02'))
 													AND ("lessons"."start_date" == 2014-12-03
 														OR "lessons"."wed" = 't')
 												ORDER BY TIME("lessons"."starts_at")
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '[0m
+<<<<<<< HEAD
+=======
   [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
   [1m[36mLesson Load (0.3ms)[0m  [1mSELECT * FROM "lessons"  
 												WHERE ("lessons"."g1_3" = 't' 
@@ -5313,6 +5362,7 @@ Processing by LessonsController#index as HTML
 												ORDER BY TIME("lessons"."starts_at")[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '[0m
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
   [1m[35mLesson Load (0.4ms)[0m  SELECT * FROM "lessons"  
 												WHERE ("lessons"."g3_5" = 't' 
 														AND ("lessons"."start_date" < '2014-12-05') 
@@ -5320,16 +5370,26 @@ Processing by LessonsController#index as HTML
 													AND ("lessons"."start_date" == 2014-12-04
 														OR "lessons"."thu" = 't')
 												ORDER BY TIME("lessons"."starts_at")
+<<<<<<< HEAD
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT * FROM "lessons"  
+=======
   [1m[36mLesson Load (0.5ms)[0m  [1mSELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g3_5" = 't' 
 														AND ("lessons"."start_date" < '2014-12-06') 
 														AND ("lessons"."end_date" > '2014-12-04'))
 													AND ("lessons"."start_date" == 2014-12-05
 														OR "lessons"."fri" = 't')
 												ORDER BY TIME("lessons"."starts_at")[0m
+<<<<<<< HEAD
+  [1m[35mLesson Load (0.3ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g3_5" = 't' AND ("lessons"."start_date" < '2014-12-07') AND ("lessons"."end_date" > '2014-12-05') AND ("lessons"."start_date" BETWEEN '2014-12-06 05:00:00.000000' AND '2014-12-07 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."g6_8" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+=======
   [1m[35mLesson Load (0.4ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g3_5" = 't' AND ("lessons"."start_date" < '2014-12-07') AND ("lessons"."end_date" > '2014-12-05') AND ("lessons"."start_date" BETWEEN '2014-12-06 05:00:00.000000' AND '2014-12-07 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
   [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."g6_8" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC[0m
   [1m[35mLesson Load (0.3ms)[0m  SELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g6_8" = 't' 
 														AND ("lessons"."start_date" < '2014-12-02') 
 														AND ("lessons"."end_date" > '2014-11-30'))
@@ -5338,14 +5398,22 @@ Processing by LessonsController#index as HTML
 												ORDER BY TIME("lessons"."starts_at")
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
+<<<<<<< HEAD
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+=======
   [1m[36mLesson Load (0.3ms)[0m  [1mSELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g6_8" = 't' 
 														AND ("lessons"."start_date" < '2014-12-03') 
 														AND ("lessons"."end_date" > '2014-12-01'))
 													AND ("lessons"."start_date" == 2014-12-02
 														OR "lessons"."tue" = 't')
 												ORDER BY TIME("lessons"."starts_at")[0m
+<<<<<<< HEAD
+  [1m[35mLesson Load (0.3ms)[0m  SELECT * FROM "lessons"  
+=======
   [1m[35mLesson Load (0.4ms)[0m  SELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g6_8" = 't' 
 														AND ("lessons"."start_date" < '2014-12-04') 
 														AND ("lessons"."end_date" > '2014-12-02'))
@@ -5354,14 +5422,22 @@ Processing by LessonsController#index as HTML
 												ORDER BY TIME("lessons"."starts_at")
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '
+<<<<<<< HEAD
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+=======
   [1m[36mLesson Load (0.6ms)[0m  [1mSELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g6_8" = 't' 
 														AND ("lessons"."start_date" < '2014-12-05') 
 														AND ("lessons"."end_date" > '2014-12-03'))
 													AND ("lessons"."start_date" == 2014-12-04
 														OR "lessons"."thu" = 't')
 												ORDER BY TIME("lessons"."starts_at")[0m
+<<<<<<< HEAD
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+=======
   [1m[35mLesson Load (0.5ms)[0m  SELECT * FROM "lessons"  
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
 												WHERE ("lessons"."g6_8" = 't' 
 														AND ("lessons"."start_date" < '2014-12-06') 
 														AND ("lessons"."end_date" > '2014-12-04'))
@@ -5370,6 +5446,56 @@ Processing by LessonsController#index as HTML
 												ORDER BY TIME("lessons"."starts_at")
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Test A '[0m
   [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g6_8" = 't' AND ("lessons"."start_date" < '2014-12-07') AND ("lessons"."end_date" > '2014-12-05') AND ("lessons"."start_date" BETWEEN '2014-12-06 05:00:00.000000' AND '2014-12-07 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
+<<<<<<< HEAD
+  Rendered lessons/_tri_cal.html.erb (222.3ms)
+  Rendered lessons/index.html.erb within layouts/application (261.4ms)
+Completed 200 OK in 601ms (Views: 593.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/lessonBlockBackground.png" for 127.0.0.1 at 2014-12-01 23:08:41 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:09:03 -0500
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-12-01 23:09:03 -0500
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-12-01 23:09:03 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-01 23:09:03 -0500
+=======
   Rendered lessons/_tri_cal.html.erb (58.0ms)
   Rendered lessons/index.html.erb within layouts/application (59.2ms)
 Completed 200 OK in 134ms (Views: 125.6ms | ActiveRecord: 7.4ms)
@@ -5715,3 +5841,450 @@ Processing by ClassroomsController#index as HTML
   [1m[35mClassroom Load (0.2ms)[0m  SELECT "classrooms".* FROM "classrooms"   ORDER BY "classrooms"."name" ASC
   Rendered classrooms/index.html.erb within layouts/application (2.0ms)
 Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+>>>>>>> be670f00e4e6c8f12c26ac7d26c94f13604c292c
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 21:52:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LessonsController#index as HTML
+Redirected to http://localhost:3000/lessons?start_date=2014-11-30
+Completed 302 Found in 44ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/lessons?start_date=2014-11-30" for 127.0.0.1 at 2014-12-02 21:52:09 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"start_date"=>"2014-11-30"}
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g1_3" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g1_3" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-02'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-11-30'
+															) 
+															AND (
+																"lessons"."mon" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-01'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mClassroom Load (0.2ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'
+  [1m[36mClassroom Load (0.1ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g1_3" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-03'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-01'
+															) 
+															AND (
+																"lessons"."tue" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-02'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g1_3" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-04'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-02'
+															) 
+															AND (
+																"lessons"."wed" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-03'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g1_3" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-05'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-03'
+															) 
+															AND (
+																"lessons"."thu" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-04'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g1_3" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-06'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-04'
+															) 
+															AND (
+																"lessons"."fri" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-05'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g1_3" = 't' AND ("lessons"."start_date" < '2014-12-07') AND ("lessons"."end_date" > '2014-12-05') AND ("lessons"."start_date" BETWEEN '2014-12-06 05:00:00.000000' AND '2014-12-07 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."g3_5" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g3_5" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-02'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-11-30'
+															) 
+															AND (
+																"lessons"."mon" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-01'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g3_5" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-03'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-01'
+															) 
+															AND (
+																"lessons"."tue" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-02'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g3_5" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-04'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-02'
+															) 
+															AND (
+																"lessons"."wed" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-03'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g3_5" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-05'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-03'
+															) 
+															AND (
+																"lessons"."thu" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-04'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g3_5" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-06'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-04'
+															) 
+															AND (
+																"lessons"."fri" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-05'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"  WHERE "classrooms"."name" = 'Classroom A'
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."g3_5" = 't' AND ("lessons"."start_date" < '2014-12-07') AND ("lessons"."end_date" > '2014-12-05') AND ("lessons"."start_date" BETWEEN '2014-12-06 05:00:00.000000' AND '2014-12-07 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g6_8" = 't' AND ("lessons"."start_date" < '2014-12-01') AND ("lessons"."end_date" > '2014-11-29') AND ("lessons"."start_date" BETWEEN '2014-11-30 05:00:00.000000' AND '2014-12-01 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g6_8" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-02'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-11-30'
+															) 
+															AND (
+																"lessons"."mon" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-01'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g6_8" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-03'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-01'
+															) 
+															AND (
+																"lessons"."tue" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-02'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g6_8" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-04'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-02'
+															) 
+															AND (
+																"lessons"."wed" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-03'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g6_8" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-05'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-03'
+															) 
+															AND (
+																"lessons"."thu" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-04'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT * FROM "lessons"  
+												WHERE (
+													"lessons"."g6_8" = 't'
+												) 
+												AND (
+														(
+															(
+																"lessons"."start_date" < '2014-12-06'
+															) 
+															AND (
+																"lessons"."end_date" > '2014-12-04'
+															) 
+															AND (
+																"lessons"."fri" = 't'
+															)
+														)		
+														OR (
+															"lessons"."start_date" = '2014-12-05'
+														)
+													)
+												ORDER BY TIME("lessons"."starts_at")[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."g6_8" = 't' AND ("lessons"."start_date" < '2014-12-07') AND ("lessons"."end_date" > '2014-12-05') AND ("lessons"."start_date" BETWEEN '2014-12-06 05:00:00.000000' AND '2014-12-07 04:59:59.999999')  ORDER BY "lessons"."starts_at" ASC
+  [1m[36mClassroom Load (0.1ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"   ORDER BY "classrooms"."name" ASC[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-01'
+                                OR ("lessons"."mon" = 't' AND "lessons"."start_date" < '2014-12-02' AND "lessons"."end_date" > '2014-11-30'))
+                            AND "lessons"."location" == 'Classroom A'
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-01'
+                                OR ("lessons"."mon" = 't' AND "lessons"."start_date" < '2014-12-02' AND "lessons"."end_date" > '2014-11-30'))
+                            AND "lessons"."location" == 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"   ORDER BY "classrooms"."name" ASC
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-02'
+                                OR ("lessons"."tue" = 't' AND "lessons"."start_date" < '2014-12-03' AND "lessons"."end_date" > '2014-12-01'))
+                            AND "lessons"."location" == 'Classroom A'[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-02'
+                                OR ("lessons"."tue" = 't' AND "lessons"."start_date" < '2014-12-03' AND "lessons"."end_date" > '2014-12-01'))
+                            AND "lessons"."location" == 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"   ORDER BY "classrooms"."name" ASC[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-03'
+                                OR ("lessons"."wed" = 't' AND "lessons"."start_date" < '2014-12-04' AND "lessons"."end_date" > '2014-12-02'))
+                            AND "lessons"."location" == 'Classroom A'
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-03'
+                                OR ("lessons"."wed" = 't' AND "lessons"."start_date" < '2014-12-04' AND "lessons"."end_date" > '2014-12-02'))
+                            AND "lessons"."location" == 'Classroom B'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "classrooms".* FROM "classrooms"   ORDER BY "classrooms"."name" ASC
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-04'
+                                OR ("lessons"."thu" = 't' AND "lessons"."start_date" < '2014-12-05' AND "lessons"."end_date" > '2014-12-03'))
+                            AND "lessons"."location" == 'Classroom A'[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-04'
+                                OR ("lessons"."thu" = 't' AND "lessons"."start_date" < '2014-12-05' AND "lessons"."end_date" > '2014-12-03'))
+                            AND "lessons"."location" == 'Classroom B'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "classrooms".* FROM "classrooms"   ORDER BY "classrooms"."name" ASC[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-05'
+                                OR ("lessons"."fri" = 't' AND "lessons"."start_date" < '2014-12-06' AND "lessons"."end_date" > '2014-12-04'))
+                            AND "lessons"."location" == 'Classroom A'
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT * FROM "lessons"  
+                        WHERE  ("lessons"."start_date" = '2014-12-05'
+                                OR ("lessons"."fri" = 't' AND "lessons"."start_date" < '2014-12-06' AND "lessons"."end_date" > '2014-12-04'))
+                            AND "lessons"."location" == 'Classroom B'[0m
+  Rendered lessons/_tri_cal.html.erb (223.9ms)
+  Rendered lessons/index.html.erb within layouts/application (232.7ms)
+Completed 200 OK in 777ms (Views: 769.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/lessons.css?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/classrooms.js?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/lessons.js?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/classrooms.css?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
+
+
+Started GET "/assets/lessonBlockBackground.png" for 127.0.0.1 at 2014-12-02 21:52:10 -0500
