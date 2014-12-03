@@ -33,7 +33,7 @@ module LessonsHelper
       dayOfWeek = days_of_week[(date.wday)]
       availables = []
       if dayOfWeek != "sun" && dayOfWeek != "sat"
-	      allRooms = Classroom.all
+	      allRooms = Classroom.all.order(:name)
 	      allRooms.each do |classroom|
 	        if classNotOccupiedOnDay(classroom, date)
 	          availables << classroom

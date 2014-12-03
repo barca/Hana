@@ -74,7 +74,8 @@
     <div>
     <%= f.label :location %>
     </div>
-    <%= f.select :location, @classroomSelect, selected: @selected_room %> 
+    <%= f.select :location, @classroomSelect, selected: @selected_room if params[:room]!=nil%> 
+    <%= f.select :location, @classroomSelect if params[:room]==nil%> 
     <!--<%= link_to "See Available Classrooms", classroom_available_path %>-->
   </div>
   <div class="field">
