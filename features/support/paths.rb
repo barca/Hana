@@ -21,6 +21,8 @@ module NavigationHelpers
 
     when /^the home page/ then '/'
 
+    when /^the lessons home page/ then '/lessons'
+
     when /^the classrooms page/ then "/classrooms"
 
     # Add more mappings here.

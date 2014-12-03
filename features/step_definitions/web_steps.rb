@@ -103,4 +103,10 @@ When(/^I click the OK$/) do
   page.driver.browser.switch_to.alert.accept
 end 
 
+When(/^I click the first classroom "(.*?)"$/) do |arg1|
+ within('div#classrooms.weekCalendarClassrooms') do 
+      page.first(:link, arg1).click  
+  end
+end
+
 

@@ -108,7 +108,7 @@ Feature: Add/Edit Lessons
     And I click "New Classroom"
     And I fill in "classroom_name" with "Multi Purpose Room"
     And I fill in "classroom_max_occupancy" with "100"
-    And I select "violet" from "classroom_color"
+    And I select "Violet" from "classroom_color"
     And I press "Create Classroom"
     And I click "Back"
     Then I should see "Multi Purpose Room"
@@ -122,15 +122,12 @@ Feature: Add/Edit Lessons
     When I click the first "Delete"
     Then I should not see "Gym"
     And I should see "Classroom was successfully destroyed"
-  
-  Scenario: ITERATION 3- See available classrooms during Lesson Creation
-    When I go to the edit lessons page for "Dancing"
-    And I set lesson start at to "2014-December-1" "3 PM:00"
-    And I set lesson end time to "5 PM:00"
-    And I click "See Available Classrooms"
-    Then I should see "Unused Room"
-    But I should not see "Gym"
 
+  Scenario: ITERATION 3- Access the lesson page from unused classroom 
+  When I go to the home page 
+  And I click the first classroom "Unused Room"
+  And I click "Calendar"
+  Then I should be on the lessons home page 
 
 
 
