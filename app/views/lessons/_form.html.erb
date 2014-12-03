@@ -74,7 +74,8 @@
     <div>
     <%= f.label :location %>
     </div>
-    <%= f.select :location, @classroomSelect %> <%= link_to "See Available Classrooms", classroom_available_path %>
+    <%= f.select :location, @classroomSelect, selected: @selected_room %> 
+    <!--<%= link_to "See Available Classrooms", classroom_available_path %>-->
   </div>
   <div class="field">
     <div>
