@@ -18,11 +18,25 @@ module LessonsHelper
 			dayEnd = "#{dayTomorrow.strftime("%Y-%m-%d")} 04:59:59.999999"
 			#SQL to return lessons for the appropriate grade level that occur on a given day
 			return classes.find_by_sql("SELECT * FROM \"lessons\"  
-												WHERE (\"lessons\".\"#{grade_level}\" = \'t\' 
-														AND (\"lessons\".\"start_date\" < \'#{dayTomorrow}\') 
-														AND (\"lessons\".\"end_date\" > \'#{dayYesterday}\'))
-													AND (\"lessons\".\"start_date\" = #{date}
-														OR \"lessons\".\"#{dayOfWeek}\" = \'t\')
+												WHERE (
+													\"lessons\".\"#{grade_level}\" = \'t\'
+												) 
+												AND (
+														(
+															(
+																\"lessons\".\"start_date\" < \'#{dayTomorrow}\'
+															) 
+															AND (
+																\"lessons\".\"end_date\" > \'#{dayYesterday}\'
+															) 
+															AND (
+																\"lessons\".\"#{dayOfWeek}\" = \'t\'
+															)
+														)		
+														OR (
+															\"lessons\".\"start_date\" = \'#{date}\'
+														)
+													)
 												ORDER BY TIME(\"lessons\".\"starts_at\")")
 		end
 	end
