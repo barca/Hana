@@ -17,7 +17,7 @@
             <div class='lessonBlock'>
               <strong><%= link_to lesson.title, lesson, style: "color: #{getLessonColor(lesson)}" %></strong><br>
               <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
-              <%= lesson.location %>
+              <%= lesson.instructor %>
             </div>
           <% end %>
         <% end %>
@@ -39,7 +39,7 @@
           <div class='lessonBlock'>
               <strong><%= link_to lesson.title, lesson, style: "color: #{getLessonColor(lesson)}" %></strong><br>
               <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
-            <%= lesson.location %>
+            <%= lesson.instructor %>
           </div>
         <% end %>
       <% end %>
@@ -62,7 +62,7 @@
             <div class='lessonBlock'>
               <strong><%= link_to lesson.title, lesson, style: "color: #{getLessonColor(lesson)}" %></strong><br>
               <%= lesson.starts_at.strftime("%I:%M") %>-<%= lesson.ends_at.strftime("%I:%M") %><br>
-              <%= lesson.location %>
+              <%= lesson.instructor %>
             </div>
           <% end %>
         <% end %>

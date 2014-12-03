@@ -21,7 +21,7 @@ module LessonsHelper
 												WHERE (\"lessons\".\"#{grade_level}\" = \'t\' 
 														AND (\"lessons\".\"start_date\" < \'#{dayTomorrow}\') 
 														AND (\"lessons\".\"end_date\" > \'#{dayYesterday}\'))
-													AND (\"lessons\".\"start_date\" == #{date}
+													AND (\"lessons\".\"start_date\" = #{date}
 														OR \"lessons\".\"#{dayOfWeek}\" = \'t\')
 												ORDER BY TIME(\"lessons\".\"starts_at\")")
 		end
