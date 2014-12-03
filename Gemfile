@@ -7,6 +7,7 @@ source 'http://rubygems.org'
     gem 'sqlite3'
   end
 
+  gem 'rails_12factor'
   gem 'debugger2'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
