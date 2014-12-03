@@ -1,0 +1,158 @@
+/* line 6, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/lessons.css.scss */
+.day {
+  width: 150px;
+  vertical-align: top;
+  height: 175px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+/* line 15, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/lessons.css.scss */
+.calendarDate {
+  color: #325932;
+  text-align: left;
+}
+/* line 18, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/lessons.css.scss */
+.calendarDate a {
+  color: #325932;
+}
+/* line 20, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/lessons.css.scss */
+.calendarDate a:visited {
+  color: #325932;
+}
+
+/* line 27, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/lessons.css.scss */
+.weekCalendar .lessonBlock {
+  background-image: url("lessonBlockBackground.png");
+  border: 2px solid black;
+  margin-bottom: 1px;
+}
+/* line 32, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/lessons.css.scss */
+.weekCalendar .today {
+  background-color: #b8f7c7;
+}
+
+/* line 37, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/lessons.css.scss */
+.weekCalendarClassrooms {
+  text-align: left;
+}
+
+/* line 41, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/lessons.css.scss */
+.prev-month, .next-month, .wday-0, .wday-6 {
+  background-color: gainsboro;
+}
+/* line 1, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  margin: 0px;
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding-left: 15px;
+  border-left: 15px solid #325932;
+}
+
+/* line 12, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 18, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 24, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 26, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #000;
+}
+/* line 29, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 41, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 45, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  color: #c00;
+}
+
+/* line 49, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 56, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 66, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 72, /Users/Tyler-Laptop/Documents/Comp342/Team-Hana/app/assets/stylesheets/scaffolds.css.scss */
+#nav_bar ul li {
+  display: inline;
+  float: left;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #b8f7c7;
+}
+
+/*
+#main_header {
+  color: #376b07;
+  font-size: 30px;
+  font-weight: bold;
+}
+*/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+require_tree .

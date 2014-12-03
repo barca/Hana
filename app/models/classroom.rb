@@ -1,4 +1,5 @@
 class Classroom < ActiveRecord::Base
+	has_many :lessons
 	validates :name, presence: true
 	validate :occupancy_not_negative
 

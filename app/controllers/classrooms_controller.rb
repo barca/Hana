@@ -79,8 +79,16 @@ class ClassroomsController < ApplicationController
       @classroom = Classroom.find(params[:id])
     end
 
+
+    def classNotOccupiedAtTime(classroom, date, start, finish)
+      #build of off classNotOccupiedOnDay
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def classroom_params
       params.require(:classroom).permit(:name, :max_occupancy, :details, :color)
     end
 end
+
+
+

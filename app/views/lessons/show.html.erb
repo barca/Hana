@@ -30,10 +30,10 @@
 <p>
   <strong><%= "From:" if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %></strong>
   <strong><%= "Date:" if @lesson.mon == false && @lesson.tue == false && @lesson.wed == false && @lesson.thu == false && @lesson.fri == false %></strong>
-  <%= @lesson.starts_at.to_date.strftime("%B %d, %Y") %>
+  <%= @lesson.start_date %>
 
   <strong><%= "to" if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %> </strong>
-  <%= @lesson.end_date.strftime("%B %d, %Y") if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %>
+  <%= @lesson.end_date if @lesson.mon == true || @lesson.tue == true || @lesson.wed == true || @lesson.thu == true || @lesson.fri == true %>
 </p>
 <p>
 </p>

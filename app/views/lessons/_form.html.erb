@@ -39,7 +39,9 @@
     <%= f.label :starts_at %>
     </div>
     &nbsp Date
-    <%= f.date_select :starts_at %><br>
+    <%= f.date_select :start_date, selected: @selected_date if params[:date]!=nil %>
+    <%= f.date_select :start_date if params[:date]==nil %>
+    <br>
     &nbsp Time
     <%= f.time_select :starts_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
@@ -47,8 +49,6 @@
     <div>
     <%= f.label :ends_at %>
     </div>
-    &nbsp Date
-    <%= f.date_select :ends_at %><br>
     &nbsp Time
     <%= f.time_select :ends_at, :ignore_date => true, prompt: true, ampm: true %>
   </div>
@@ -67,25 +67,22 @@
     Friday
     <%= f.check_box :fri %>
     <br> &nbsp <%=f.label :until %>
-    <%= f.date_select :end_date %>
+    <%= f.date_select :end_date, selected: @selected_date if params[:date]!=nil %>
+    <%= f.date_select :end_date if params[:date]==nil %>
   </div>
   <div class="field">
     <div>
     <%= f.label :location %>
     </div>
-    <%= f.select :location, @classroomSelect %>
+    <%= f.select :location, @classroomSelect, selected: @selected_room if params[:room]!=nil%> 
+    <%= f.select :location, @classroomSelect if params[:room]==nil%> 
+    <!--<%= link_to "See Available Classrooms", classroom_available_path %>-->
   </div>
   <div class="field">
     <div>
     <%= f.label :max_enrollment %>
     </div>
     <%= f.number_field :max_enrollment, min: 0 %>
-  </div>
-  <div class="field">
-    <div>
-    <%= f.label :color%>
-    </div>
-    <%= f.select :color, @classroomsColorSelect %>
   </div>
   <div class="field">
     <div>
