@@ -49,7 +49,7 @@ module LessonsHelper
       #currently only returns classes available on a specific day
       @lessons=Lesson.find_by_sql("SELECT * FROM \"lessons\"  
                         WHERE  (\"lessons\".\"start_date\" = \'#{date}\'
-                                OR \"lessons\".\"#{dayOfWeek}\" = \'t\')
+                                OR (\"lessons\".\"#{dayOfWeek}\" = \'t\' AND \"lessons\".\"start_date\" < \'#{date+1}\' AND \"lessons\".\"end_date\" > \'#{date-1}\'))
                             AND \"lessons\".\"location\" == \'#{classroom.name}\'")
       if @lessons == []
         return true
