@@ -57,8 +57,8 @@ Then /^I should locate "(.*?)" in "(.*?)"$/ do |lesson, calendar|
   page.assert_selector(:css,'#'+calendar,:text=>lesson,:minimum=>1)
 end 
 
-Then /^I should not locate "(.*?)" in "(.*?)"$/ do |arg1, arg2|
-  page.find('#'+arg2).should !(have_content(arg1))
+Then /^I should not locate "(.*?)" in "(.*?)"$/ do |lesson, calendar|
+  page.assert_selector(:css,'#'+calendar,:text=>lesson,:count=>0)
 end 
 
 
