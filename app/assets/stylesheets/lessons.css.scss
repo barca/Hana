@@ -29,9 +29,6 @@
 		border: 2px solid black;
 		margin-bottom: 1px;
 	}
-	.prev-month, .next-month, .wday-0, .wday-6 {
-		background-color: gainsboro;
-	}
 	.today {
 		background-color: rgb(184, 247, 199);
 	}
@@ -39,6 +36,10 @@
 
 .weekCalendarClassrooms {
 	text-align: left;
+}
+
+.prev-month, .next-month, .wday-0, .wday-6 {
+	background-color: gainsboro;
 }
 
 
