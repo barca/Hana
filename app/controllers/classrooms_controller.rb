@@ -85,7 +85,27 @@ class ClassroomsController < ApplicationController
     if params[:sort] != session[:sort]
       session[:sort] = sort
     end
-    @available_classrooms = Classroom.all.order(ordering)
+
+    if params[:day] != nil
+      @date = Date.new(params[:day]['get(1i)'].to_i,params[:day]['get(2i)'].to_i,params[:day]['get(3i)'].to_i)
+    else
+      @date = Date.today
+    end
+
+    if params[:starts_at] != nil
+      @start_time = Time.parse "2000-01-01 #{params[:starts_at]['get(4i)']}:#{params[:starts_at]['get(5i)']}"
+    else
+      @start_time = Time.now
+    end
+
+    if params[:ends_at] != nil
+      @end_time = Time.parse "2000-01-01 #{params[:ends_at]['get(4i)']}:#{params[:ends_at]['get(5i)']}"
+    else
+      @end_time = Time.now
+    end
+
+    @classrooms = Classroom.all
+    @available_classrooms = dailyAvailableClassrooms(@date)
   end
 
   private
@@ -94,8 +114,42 @@ class ClassroomsController < ApplicationController
       @classroom = Classroom.find(params[:id])
     end
 
+    def dailyAvailableClassrooms(date)
+      availables = []
+      allRooms = Classroom.all
+      allRooms.each do |classroom|
+        if classNotOccupiedOnDay(classroom, date)
+          availables << classroom
+        end
+      end
+      return availables
+    end
+
+
+    def classNotOccupiedAtTime(classroom, date, start, finish)
+      #build of off classNotOccupiedOnDay
+    end
+
+    def classNotOccupiedOnDay(classroom, date)
+      days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
+      dayOfWeek = days_of_week[(date.wday)]
+      #currently only returns classes available on a specific day
+      @lessons=Lesson.find_by_sql("SELECT * FROM \"lessons\"  
+                        WHERE  (\"lessons\".\"start_date\" = \'#{date}\'
+                                OR \"lessons\".\"#{dayOfWeek}\" = \'t\')
+                            AND \"lessons\".\"location\" == \'#{classroom.name}\'")
+      if @lessons == []
+        return true
+      else
+        return false
+      end      
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def classroom_params
       params.require(:classroom).permit(:name, :max_occupancy, :details, :color)
     end
 end
+
+
+
