@@ -30,8 +30,8 @@ class ClassroomsController < ApplicationController
   end
 
   # GET /classrooms/1/edit
-  def edit
-  end
+  #def edit
+  #end
 
   # POST /classrooms
   # POST /classrooms.json
