@@ -6,6 +6,7 @@ source 'http://rubygems.org'
   group :development do
     gem 'sqlite3'
   end
+  gem 'haml'
 
   gem 'debugger2'
   gem 'cucumber-rails', :require => false
