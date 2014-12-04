@@ -6,8 +6,8 @@ source 'http://rubygems.org'
   group :development do
     gem 'sqlite3'
   end
-  gem 'haml'
 
+  gem 'haml-rails'
   gem 'debugger2'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
