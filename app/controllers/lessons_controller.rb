@@ -25,8 +25,8 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   # GET /lessons/1.json
-  def show
-  end
+  #def show
+  #end
 
   # GET /lessons/new
   def new
