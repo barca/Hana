@@ -37,7 +37,7 @@ module LessonsHelper
 															\"lessons\".\"start_date\" = \"#{date}\"
 														)
 													)
-												ORDER BY TIME(\"lessons\".\"starts_at\")
+												ORDER BY (\"lessons\".\"starts_at\")
                                ")
 		end
 	end
