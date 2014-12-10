@@ -24,10 +24,10 @@ module LessonsHelper
 												AND (
 														(
 															(
-																\"lessons\".\"start_date\" < \"#{dayTomorrow}\"
+																\"lessons\".\"start_date\" < \'#{dayTomorrow}\'
 															)
 															AND (
-																\"lessons\".\"end_date\" > \"#{dayYesterday}\"
+																\"lessons\".\"end_date\" > \'#{dayYesterday}\'
 															)
 															AND (
 																\"lessons\".\"#{dayOfWeek}\" = \'t\'
