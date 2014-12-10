@@ -37,7 +37,6 @@ module LessonsHelper
 															\"lessons\".\"start_date\" = \"#{date}\"
 														)
 													)
-                          #ORDER BY TIME doesn't work on PostGres
 												ORDER BY TIME(\"lessons\".\"starts_at\")
                                ")
 		end
