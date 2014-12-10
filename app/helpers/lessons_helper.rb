@@ -38,7 +38,8 @@ module LessonsHelper
 														)
 													)
                           #ORDER BY TIME doesn't work on PostGres
-												ORDER BY TIME(\"lessons\".\"starts_at\")")
+												ORDER BY TIME(\"lessons\".\"starts_at\")
+                                )
 		end
 	end
 
