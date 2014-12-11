@@ -3,7 +3,7 @@ class Lesson < ActiveRecord::Base
 	has_calendar
 
 	#form validation
-	validates :title, :instructor, :location, presence: true
+  validates :ends_at, :starts_at, :title, :instructor, :location, presence: true
 	validate :some_grade_level_selected
 	validate :ends_at_after_starts_at
 	validate :enrollment_not_negative
@@ -20,6 +20,11 @@ class Lesson < ActiveRecord::Base
 	  end
 	end
 
+  def starts_date_not_nil
+    if start_date == nil
+      errors.add(:start_date, "can't be empty")
+    end
+  end
 	def end_date_after_start_date
 		if mon==true || tue==true || wed==true || thu==true || fri==true
 			if end_date < start_date
@@ -27,6 +32,7 @@ class Lesson < ActiveRecord::Base
 			end
 		end
 	end
+
 
 	def ends_at_after_starts_at
 		if ends_at.to_i < starts_at.to_i
