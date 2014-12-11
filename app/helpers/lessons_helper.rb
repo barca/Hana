@@ -67,10 +67,16 @@ module LessonsHelper
       days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
       dayOfWeek = days_of_week[(date.wday)]
       #currently only returns classes available on a specific day
+			classrooms = Lesson.where("\"lessons\".\"start_date\" = ? or \"lessons\".\"start_date\" < ?", date, date + 1)
+      classrooms = classrooms.where("\"lessons\".\"#{dayOfWeek}\" = \'t\'")
+      classrooms = classrooms.where("\"lessons\".\"end_date\" > \'#{date-1}\'")
+      @lessons = classrooms.where("\"lessons\".\"location\" = ?", classroom.name)
+=begin
       @lessons=Lesson.find_by_sql("SELECT * FROM \"lessons\"
                         WHERE  (\"lessons\".\"start_date\" = \'#{date}\'
                                 OR (\"lessons\".\"#{dayOfWeek}\" = \'t\' AND \"lessons\".\"start_date\" < \'#{date+1}\' AND \"lessons\".\"end_date\" > \'#{date-1}\'))
                             AND \"lessons\".\"location\" == \'#{classroom.name}\'")
+=end
       if @lessons == []
         return true
       else
