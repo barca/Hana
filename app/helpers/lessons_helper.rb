@@ -21,30 +21,6 @@ module LessonsHelper
       classes = classes.where("\"lessons\".\"end_date\" > ?" , dayYesterday)
 			classes = classes.where("\"lessons\".\"#{dayOfWeek}\" = \'t\'")
 		  return classes.where("\"lessons\".\"#{grade_level}\" = \'t\'").order(:starts_at)
-=begin
-			return classes.find_by_sql("SELECT * FROM \"lessons\"
-												WHERE (
-													\"lessons\".\"#{grade_level}\" = \'t\'
-												)
-												AND (
-														(
-															(
-																\"lessons\".\"start_date\" < \'#{dayTomorrow}\'
-															)
-															AND (
-																\"lessons\".\"end_date\" > \'#{dayYesterday}\'
-															)
-															AND (
-																\"lessons\".\"#{dayOfWeek}\" = \'t\'
-															)
-														)
-														OR (
-															\"lessons\".\"start_date\" = \"#{date}\"
-														)
-													)
-												ORDER BY (\"lessons\".\"starts_at\")
-                               ")
-=end
   end
 	end
     def dailyAvailableClassrooms(date)
@@ -71,12 +47,6 @@ module LessonsHelper
       classrooms = classrooms.where("\"lessons\".\"#{dayOfWeek}\" = \'t\'")
       classrooms = classrooms.where("\"lessons\".\"end_date\" > \'#{date-1}\'")
       @lessons = classrooms.where("\"lessons\".\"location\" = ?", classroom.name)
-=begin
-      @lessons=Lesson.find_by_sql("SELECT * FROM \"lessons\"
-                        WHERE  (\"lessons\".\"start_date\" = \'#{date}\'
-                                OR (\"lessons\".\"#{dayOfWeek}\" = \'t\' AND \"lessons\".\"start_date\" < \'#{date+1}\' AND \"lessons\".\"end_date\" > \'#{date-1}\'))
-                            AND \"lessons\".\"location\" == \'#{classroom.name}\'")
-=end
       if @lessons == []
         return true
       else
