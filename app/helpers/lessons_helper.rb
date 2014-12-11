@@ -1,11 +1,11 @@
 module LessonsHelper
 
 	#find lessons occuring on a given day
-	def lessonsOn(date, classes, grade_level)
+	def lessonsOn(date, lessons, grade_level)
 		dayTomorrow = (date + 1)
 		dayYesterday = (date - 1)
-    	classes = classes.where("\"lessons\".\"start_date\" < ?", dayTomorrow)
-    	classes = classes.where("\"lessons\".\"end_date\" > ?" , dayYesterday)
+    classes = lessons.where("\"lessons\".\"start_date\" < ?", dayTomorrow)
+    classes = classes.where("\"lessons\".\"end_date\" > ?" , dayYesterday)
 
 		days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
 		dayOfWeek = days_of_week[(date.wday)]
@@ -17,6 +17,11 @@ module LessonsHelper
 			dayTomorrow = date + 1
 			dayEnd = "#{dayTomorrow.strftime("%Y-%m-%d")} 04:59:59.999999"
 			#SQL to return lessons for the appropriate grade level that occur on a given day
+      classes = lessons.where("\"lessons\".\"start_date\" < ? or \"lessons\".\"start_date\" = ?", dayTomorrow, date)
+      classes = classes.where("\"lessons\".\"end_date\" > ?" , dayYesterday)
+			classes = classes.where("\"lessons\".\"#{dayOfWeek}\" = \'t\'")
+		  return classes.where("\"lessons\".\"#{grade_level}\" = \'t\'").order(:starts_at)
+=begin
 			return classes.find_by_sql("SELECT * FROM \"lessons\"
 												WHERE (
 													\"lessons\".\"#{grade_level}\" = \'t\'
@@ -39,9 +44,9 @@ module LessonsHelper
 													)
 												ORDER BY (\"lessons\".\"starts_at\")
                                ")
-		end
+=end
+  end
 	end
-
     def dailyAvailableClassrooms(date)
 
       days_of_week = ["sun","mon", "tue", "wed", "thu", "fri","sat"]
